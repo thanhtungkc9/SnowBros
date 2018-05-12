@@ -205,8 +205,7 @@ TextureImporter:
     21300400: playerSpeed2
     21300402: snow_bros_play_201
     21300404: snow_bros_play_202
-  externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -214,8 +213,6 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
-    mipMapsPreserveCoverage: 0
-    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -231,13 +228,10 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -246,52 +240,41 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spritePixelsToUnits: 25
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -307,14 +290,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ee91af3d3d56210409e63651a19a75cd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_1
       rect:
@@ -327,14 +303,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: dbe5f2f15a4a339458dcc481c7c8b6f8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_2
       rect:
@@ -347,14 +316,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1cb9d50448cf0b442991a9d001f5d064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_3
       rect:
@@ -367,14 +329,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02443a3f77ae5b347a74a87c7e9a0c44
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_4
       rect:
@@ -387,14 +342,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a586decf35728194096d51283b82c97f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerWalk1
       rect:
@@ -407,14 +355,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 666671c78cfe04b489ac6ca1a8f20ea3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerWalk2
       rect:
@@ -427,14 +368,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 32a178bfb1e6bf64496eb8e38b1ffad0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerWalk3
       rect:
@@ -447,14 +381,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: b8a0327216ba1b642abdf0ae13f06d1c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerWalk4
       rect:
@@ -467,14 +394,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a0bc3af7d7761b440b228a68a28f1cf2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerThrow1
       rect:
@@ -487,14 +407,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 2a4f760f717a24d46b6495eca1449481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerThrow2
       rect:
@@ -507,14 +420,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 051861cf9f476324ab2708ea86a4109a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerThrow3
       rect:
@@ -527,14 +433,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f80f35e26b2fea244b9caedd4890b5f2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerThrow4
       rect:
@@ -547,14 +446,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1e44cdba47e465d4b813c4fd39b231d6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bullet1
       rect:
@@ -567,14 +459,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 8db9d8098365e7640a7298b42f583a2b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bullet2
       rect:
@@ -587,14 +472,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 9461bd7249178714aaded9d4fc2879e5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigBullet1
       rect:
@@ -607,14 +485,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d78277e05ac25b54786c38dc2029b6df
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigBullet2
       rect:
@@ -627,14 +498,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 0cb543ea92f7aad4bbb555c034df41cf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_17
       rect:
@@ -647,14 +511,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 26700c22e23448248a359b32e621c312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_18
       rect:
@@ -667,14 +524,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 7ccfea1d30115b14590684fd71eb138b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_19
       rect:
@@ -687,14 +537,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e9648fb08c7852d47b85c3f5f9108b77
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_20
       rect:
@@ -707,14 +550,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e8907b229960fc24f8ba4cfa7e47642a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_21
       rect:
@@ -727,14 +563,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: af0de768aed26e94b8d4d1fbc081340d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_22
       rect:
@@ -747,14 +576,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a66066f927849bb43bc2a0d47e6f807e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_23
       rect:
@@ -767,14 +589,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5daf2c6237b60e5428052fbf7baadda2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_24
       rect:
@@ -787,14 +602,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 129a06c69defc4c44a93e626e895d787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_25
       rect:
@@ -807,14 +615,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e86441b9a5bd25f4aab4d23117bc472e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_26
       rect:
@@ -827,14 +628,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: dc15a019c567e6a4280e40e2d81f21db
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_27
       rect:
@@ -847,14 +641,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 460b86ec7932ca24fa4fa5f2765433c3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_28
       rect:
@@ -867,14 +654,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 7c326c21ca490b14cb9f254ef1259658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_29
       rect:
@@ -887,14 +667,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1270d84f0a1c025419cb70824dd3c258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_30
       rect:
@@ -907,14 +680,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a67836964bfed5c40be15af9c1bd68c8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_31
       rect:
@@ -927,14 +693,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 909493d47bf967543b62979614fc64a7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_32
       rect:
@@ -947,14 +706,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c7cca7e5182d4bd48bbaf349cd07f212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_33
       rect:
@@ -967,14 +719,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 4ce60c71c249e6448b8277411988ea8a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_34
       rect:
@@ -987,14 +732,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 57fad4ee33a3fcb44ab4771a94bef77c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_35
       rect:
@@ -1007,14 +745,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c67d9885ecc63c447a6b7266e87873e4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_36
       rect:
@@ -1027,14 +758,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 6bb7fa3a58d30a74d84c559369559d25
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_37
       rect:
@@ -1047,14 +771,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ede5cbf3da2ce704ebc760c621fe0518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_38
       rect:
@@ -1067,14 +784,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c8ecdf44b609e51408c484a1fd27347b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_39
       rect:
@@ -1087,14 +797,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 782ba33a77998794fb38e4cc409f6fdd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerPush1
       rect:
@@ -1107,14 +810,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1604b094722b69340ba0a6ad6c374714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerPush2
       rect:
@@ -1127,14 +823,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 2946266d8546a1d458ffd650ba804a25
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerPush3
       rect:
@@ -1147,14 +836,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 9cfaf27ff6a74d248a30066eb780654d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerPush4
       rect:
@@ -1167,14 +849,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1a7219671bd05a94887755d6da033b02
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_44
       rect:
@@ -1187,14 +862,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 350d9259d01a28e49800ddd22fe9a9ad
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_45
       rect:
@@ -1207,14 +875,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f1fd0999d5d982348895b293033ae452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_46
       rect:
@@ -1227,14 +888,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 351d85fc338237043856be6e229bbe7b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_47
       rect:
@@ -1247,14 +901,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 31d488adb6fdf6a41b635afdead86247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_48
       rect:
@@ -1267,14 +914,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 626aa34fd2c633442bc1b6b426747d9d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_49
       rect:
@@ -1287,14 +927,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 49d14fc902da18e489a2186070318352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_50
       rect:
@@ -1307,14 +940,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ca1b99944ad003a49933934accfc33ea
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_51
       rect:
@@ -1327,14 +953,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1abd7125f82baa145bb7b38fe9231ada
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_52
       rect:
@@ -1347,14 +966,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 0aac659fb748f464ab81bf9879f9d5d1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_53
       rect:
@@ -1367,14 +979,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 54c79cf7998909e4e9bc86e133de5c3c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_54
       rect:
@@ -1387,14 +992,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a9e264ae4eef5e04f8812869c100b511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_55
       rect:
@@ -1407,14 +1005,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 08ad9fd765f2f8f4baa3959146bdb331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_56
       rect:
@@ -1427,14 +1018,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: b9abfb938d2d5fa4da308b1dba334bf1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_57
       rect:
@@ -1447,14 +1031,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 05d29a1d001845949821ed6ba6b65032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_58
       rect:
@@ -1467,14 +1044,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 8c6490dbb87fbd04b9a97aa7358f47ca
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_59
       rect:
@@ -1487,14 +1057,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5d7a3040d8811894288a1e523a0daf53
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_60
       rect:
@@ -1507,14 +1070,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: eedbf01e0bee5a640b9d3d188a3951e2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_61
       rect:
@@ -1527,14 +1083,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 889b7592f9f16ff41b5ed83707ef6600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_62
       rect:
@@ -1547,14 +1096,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 27b18d0a6aaeb404d875e4ddb9c78160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_63
       rect:
@@ -1567,14 +1109,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c43ebe7bf3ca8464faf7e9014f4f5410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_64
       rect:
@@ -1587,14 +1122,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d10b9194419da65479ec678c8ee90c23
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_65
       rect:
@@ -1607,14 +1135,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 006a704c774efd540bb6218448158bec
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRun1
       rect:
@@ -1627,14 +1148,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e8a702d6b64a5ef498b076f203b25e4a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRun2
       rect:
@@ -1647,14 +1161,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c5ad8ddf68ebdaa4cb9b59d23c82ccdf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRun3
       rect:
@@ -1667,14 +1174,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 810479cfc9a676b41a3aed61a0d1116d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRun4
       rect:
@@ -1687,14 +1187,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ee95efc09a78a9e40b5a9c15ec166075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunPush1
       rect:
@@ -1707,14 +1200,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 4ae117175d7ad2e47839cfedb8763509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunPush2
       rect:
@@ -1727,14 +1213,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f6e041048e0e78444b3fa85065f90432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunPush3
       rect:
@@ -1747,14 +1226,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a44c9258a21afba44bf326739f7ca5bb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunPush4
       rect:
@@ -1767,14 +1239,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 838a895e9ce594e4f9a1ba32094d079b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump1
       rect:
@@ -1787,14 +1252,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 77197f68cbf025f4aab1867fd4ac75c0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump2
       rect:
@@ -1807,14 +1265,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f10f765a380e4424481b50fabc25976b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump3
       rect:
@@ -1827,14 +1278,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 96597b6f65380c9429f420c7f8f85261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump4
       rect:
@@ -1847,14 +1291,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e06cff976a183b843b9c83808363b27c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump5
       rect:
@@ -1867,14 +1304,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d4f1ae8b744da9e4a8c1e0ec3ff0010a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump6
       rect:
@@ -1887,14 +1317,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 21b418ccb68f1db40b0cd1b7c99c4d44
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump7
       rect:
@@ -1907,14 +1330,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ad5422d14b443d14180fd82edb23b51f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerJump8
       rect:
@@ -1927,14 +1343,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 74b2ed28baca7b142bdd96c221715002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_82
       rect:
@@ -1947,14 +1356,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: cf5b06e38c458654fbfb7ffbfd386956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunThrow1
       rect:
@@ -1967,14 +1369,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d93f8ac4f49099e479c4130a1f6e5adb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunThrow2
       rect:
@@ -1987,14 +1382,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5f036c1633cbf4b428a4cae10bafb309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunThrow3
       rect:
@@ -2007,14 +1395,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 81974504427fb0a47a624547aeac6651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRunThrow4
       rect:
@@ -2027,14 +1408,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: cd6e9c41bd57d584d98669aa68e27bb2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_87
       rect:
@@ -2047,14 +1421,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: bfd6aedf5065a044f8b45c009b8573ad
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_88
       rect:
@@ -2067,14 +1434,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f4860ccf3fe121b46a18b9bcf096fdca
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_89
       rect:
@@ -2087,14 +1447,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d1429fcfb690d964ca3dfb0d41f32d1d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_90
       rect:
@@ -2107,14 +1460,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 3a0ced089eb5cd54abfbf9f1780665ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_91
       rect:
@@ -2127,14 +1473,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 86ba1b5dcc9da50479ba0e9881df9cbe
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_92
       rect:
@@ -2147,14 +1486,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5b8c43ecf15384e41aef0723b03be425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_93
       rect:
@@ -2167,14 +1499,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c21265110aadd3e4489767afee469604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_94
       rect:
@@ -2187,14 +1512,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1bee877a71e07ab4dbbac9e346bfd62c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_95
       rect:
@@ -2207,14 +1525,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c0f86d5d119b08e4885ca08a75bca90c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_96
       rect:
@@ -2227,14 +1538,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 6a297bb4d72654c468a2068af996f984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_97
       rect:
@@ -2247,14 +1551,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a5d92c7d58b7644469f7515e840f9ad4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_98
       rect:
@@ -2267,14 +1564,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1aca55445e82e434cacb6933e32cb372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerFly1
       rect:
@@ -2287,14 +1577,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 26fac00ac3f99554a80f7bf9d0e11378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerFly2
       rect:
@@ -2307,14 +1590,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: b6d93be535e107247bdfda2c7f981410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_101
       rect:
@@ -2327,14 +1603,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 191e9d379b4ed1e4dad855bd6fd0bea7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_102
       rect:
@@ -2347,14 +1616,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5e2e3cbf2fc68d04bba6100908506c17
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_103
       rect:
@@ -2367,14 +1629,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e3d17185cd4948448b8692a80e392412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_104
       rect:
@@ -2387,14 +1642,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c91ca5cf8486c87428b4bcb18cfbde8e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_105
       rect:
@@ -2407,14 +1655,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 2def860faa6012b498e41b82665cb1ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_106
       rect:
@@ -2427,14 +1668,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ccb494c3a0d12d14682bdee15c967893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_107
       rect:
@@ -2447,14 +1681,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: cd7e3bff44b58b24786746386089e97c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_108
       rect:
@@ -2467,14 +1694,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 2e330a60beaf4f345b62716963fc2ac2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_109
       rect:
@@ -2487,14 +1707,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 92f6bf2320604cc4d9de037415fa7091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie1
       rect:
@@ -2507,14 +1720,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 0cd29aaf2f8d98b4f942c71e8d4e4786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie2
       rect:
@@ -2527,14 +1733,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: da1f32f2c7262294ebe919aae6a7396b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie3
       rect:
@@ -2547,14 +1746,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 67f03e7f77608724f8c7a379e76d807a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie4
       rect:
@@ -2567,14 +1759,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 011f12243dc7e09418e8b7df33aec7a1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie5
       rect:
@@ -2587,14 +1772,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 77201bce5203e844e8084f1c477a49f3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie6
       rect:
@@ -2607,14 +1785,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 4398f798343b0bb43b7dcf432c108b8e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie7
       rect:
@@ -2627,14 +1798,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 2c5fa14a904c65d449bf9d5d81df5666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerDie8
       rect:
@@ -2647,14 +1811,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ec5f5060efd10294d8d14e8be2d4af65
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_118
       rect:
@@ -2667,14 +1824,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: cc1d9c3696667f8438c4492ed7a52abd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_119
       rect:
@@ -2687,14 +1837,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a6108cd252fad754682a5f545116d601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_120
       rect:
@@ -2707,14 +1850,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 93590378c6e876c4dacec7590b5be24e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_121
       rect:
@@ -2727,14 +1863,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 369cb6004ba38444bbcc6d409e953e85
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_122
       rect:
@@ -2747,14 +1876,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: b207d45a00d54a6408159f131d0bce16
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_123
       rect:
@@ -2767,14 +1889,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 6a181bfd830fb8d439851d308cae04fe
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_124
       rect:
@@ -2787,14 +1902,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a1ca0acd021bf1c4380d5b981fefce97
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_125
       rect:
@@ -2807,14 +1915,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 0ff94ec1e5c9cd74da55909beb2a3d78
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_126
       rect:
@@ -2827,14 +1928,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f3002fc127b7c4f498c602590f0a4fce
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_127
       rect:
@@ -2847,14 +1941,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 641e228b212f0c746bb827123b96d641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_128
       rect:
@@ -2867,14 +1954,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 6ea0b1ec0f275474291d6f41f30d0e8a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_129
       rect:
@@ -2887,14 +1967,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 6e6c848c93f39bf44aa73fd8fc362e14
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_130
       rect:
@@ -2907,14 +1980,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5e83c72b2fdffef4e928df0e9ee6eb3a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_131
       rect:
@@ -2927,14 +1993,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f5561719e4c2682409f56d378880579f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_132
       rect:
@@ -2947,14 +2006,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 50105cbbb151d0b4ea9ba702448fde4c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_133
       rect:
@@ -2967,14 +2019,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5dd0d81f94ed08f47b85d86e19403c30
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_134
       rect:
@@ -2987,14 +2032,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a6ac0c7f51481e74281c2ca1e0da3d87
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_135
       rect:
@@ -3007,14 +2045,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ca1320d890a071c43aabca429c55d062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_136
       rect:
@@ -3027,14 +2058,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 69d537b2451cb3341b282f9d45685947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_137
       rect:
@@ -3047,14 +2071,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: df9d1f1771208f64f871b801394e0c99
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_138
       rect:
@@ -3067,14 +2084,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 6e26f2a5c47a40444acc842ceb1aa646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_139
       rect:
@@ -3087,14 +2097,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 363f7f9371ce5e845b0ffedb36b19a53
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_140
       rect:
@@ -3107,14 +2110,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 8759f8727ea285047aef6feae2dc4243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_141
       rect:
@@ -3127,14 +2123,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: b6252f4576b26384daec0460d465f69d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_142
       rect:
@@ -3147,14 +2136,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 2c8d78df64b85dc42863e029cf621489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_143
       rect:
@@ -3167,14 +2149,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 7b409116f37bab84badece4a96886999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_144
       rect:
@@ -3187,14 +2162,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d29a668226a9fe245b03cba79ae37174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_145
       rect:
@@ -3207,14 +2175,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 3418c8bd2c6b3f042b7008c689b1fed6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_146
       rect:
@@ -3227,14 +2188,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ebbf6446db7b1134d9e4f7923a1ad723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_147
       rect:
@@ -3247,14 +2201,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d40f4b0215824ad40900d53df71eeec7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_148
       rect:
@@ -3267,14 +2214,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: eebc1416592c7e7428ba33cc8c90fdce
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_149
       rect:
@@ -3287,14 +2227,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 115bd33b244c3524183594d1352b8cf4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_150
       rect:
@@ -3307,14 +2240,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: cbf54a0e78767a14e91606261c483c0d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_151
       rect:
@@ -3327,14 +2253,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: adc617fbe9c56ea4d9d41edf2843d1c6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_152
       rect:
@@ -3347,14 +2266,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 4cdb507d533bf1c4e9b77e95dfa260be
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_153
       rect:
@@ -3367,14 +2279,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1f704078a4c52294a9a7be78305522bd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_154
       rect:
@@ -3387,14 +2292,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 828b19eb87c2e484bb1174ca75d4278b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_155
       rect:
@@ -3407,14 +2305,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: df0cb6e1722b5984b8e9053aef4392c2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_156
       rect:
@@ -3427,14 +2318,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 9c1a6ae692b4ea04393d2f8a66c6edb6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_157
       rect:
@@ -3447,14 +2331,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 309750475a03ec64899d7425644e341f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_158
       rect:
@@ -3467,14 +2344,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: cfbdbc71382697849895c5fe6bab94d3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_159
       rect:
@@ -3487,14 +2357,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 77136ef98af5d5d41b1934ab1a77c0fd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_160
       rect:
@@ -3507,14 +2370,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 70a96757fbd19d04d8920fc48d2f6d39
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_161
       rect:
@@ -3527,14 +2383,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 7178994cc330cec49a9bd6d5b46dee51
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_162
       rect:
@@ -3547,14 +2396,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d5ae83a040953784d8de7fbd4b0006a1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_163
       rect:
@@ -3567,14 +2409,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: b0b053722154e2b44b868ef9a4219d71
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_164
       rect:
@@ -3587,14 +2422,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 48b709d94cf03ac4da6b58ca70501009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_165
       rect:
@@ -3607,14 +2435,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5093a8aa8e0de1746bd39cf8cb660f10
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_166
       rect:
@@ -3627,14 +2448,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 2f658647e09b5184d96c7a5564693e2e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_167
       rect:
@@ -3647,14 +2461,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ac8ce7e36c1b35e479fc5f109d4fe52b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_168
       rect:
@@ -3667,14 +2474,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 3b5445ba1f972c04d9112431f441e4af
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_169
       rect:
@@ -3687,14 +2487,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 0d7094ca949be044cbffc9cd8242542d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_170
       rect:
@@ -3707,14 +2500,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 0badd4466dc332f47891d9b3a44b8e72
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_171
       rect:
@@ -3727,14 +2513,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2718e53ef2f45f439ecdc6ac615f0f9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_172
       rect:
@@ -3747,14 +2526,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ff94cca88ffc6d24fae20b6033aa4157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_173
       rect:
@@ -3767,14 +2539,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a13ac86c27d19cc43a48550d916b5219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_174
       rect:
@@ -3787,14 +2552,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 827b2f05c4293c6498d4dfe10117e365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_175
       rect:
@@ -3807,14 +2565,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 388eaf162645a414d9c1948c34818579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_176
       rect:
@@ -3827,14 +2578,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 6bf3647427c370f4f9233e0eba1a2e7e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_177
       rect:
@@ -3847,14 +2591,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: fa2225852fe269c41a06c7dde2b6a7c3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_178
       rect:
@@ -3867,14 +2604,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 185d1fdea50875d4a805d9abf3b67940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_179
       rect:
@@ -3887,14 +2617,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: d1734c7bcb8a3774ab0ff18e03caf4b4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_180
       rect:
@@ -3907,14 +2630,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 80454596a3ba8ba4fbe8d08599937194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_181
       rect:
@@ -3927,14 +2643,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e66c58f7c426811499b0fd276df9dea4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_182
       rect:
@@ -3947,14 +2656,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: bcd3e31d0c70baf4aad960ad3e983d86
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_183
       rect:
@@ -3967,14 +2669,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 5d1e8674e5916a141bc7908ec9d445c3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_184
       rect:
@@ -3987,14 +2682,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 118804206a9a83e47b515e9696af3369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_185
       rect:
@@ -4007,14 +2695,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 9531955793301a647879295864cfb941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_186
       rect:
@@ -4027,14 +2708,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 8ff9b15c888cf6d4197a7da035b89e0b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigPlayer1
       rect:
@@ -4047,14 +2721,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 736e43a58ae68da488b98b09048dfbb2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigPlayer2
       rect:
@@ -4067,14 +2734,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 497a97a21ffc8d844a96c7ac32932765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigPlayer3
       rect:
@@ -4087,14 +2747,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: b1eff561425782446a154f3944f94db0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigPlayer4
       rect:
@@ -4107,14 +2760,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 750d3f76d4a4ff04eba0bc8092881359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigPlayer5
       rect:
@@ -4127,14 +2773,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 3e36868fb98aaec49a8426a1774c08fb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bigPlayer6
       rect:
@@ -4147,14 +2786,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: dc5445b6f66e58a4a88ba0657b89663e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerBigMove1
       rect:
@@ -4167,14 +2799,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: f75f08b6013071746bed836dbbc79b66
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerBigMove2
       rect:
@@ -4187,14 +2812,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 194bbda9ec7787b478b12a31e8ca98ef
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: itemPower1
       rect:
@@ -4207,14 +2825,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 35b8ddff794626d45b2ead89f81a8669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: itemPower2
       rect:
@@ -4227,14 +2838,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 1a036674de7996c4c89790cc9ff9108f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRange1
       rect:
@@ -4247,14 +2851,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 469f48233afbb1d499610429103bd563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerRange2
       rect:
@@ -4267,14 +2864,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 46f44c9bfd110d548a046b1a2dc72c7e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerSpeed1
       rect:
@@ -4287,14 +2877,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: ded61dbf539918748b354a4bea1aefe7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: playerSpeed2
       rect:
@@ -4307,14 +2890,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 865314b380baad34aa6e523a84450468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_201
       rect:
@@ -4327,14 +2903,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62d0892bbe2da5242a547629f43b144e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: snow_bros_play_202
       rect:
@@ -4347,22 +2916,8 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 8d35cd575b5202049895a7b6d63306d5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
-    physicsShape: []
-    bones: []
-    spriteID: 6ae2d12e8c2dc6f4ca12d3f64d31d911
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -1,0 +1,179 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour {
+
+    public float moveForce = 150f;
+    public float jumpForce = 1400f;
+    public float maxVelocity = 8f;
+    public float pushForce = 1f;
+    public float damage = 10f;
+    public Transform shootPoint;
+
+    private bool grounded, pushed, bullet = false;
+    private Rigidbody2D myBody;
+    private Animator anim;
+    [SerializeField]
+    private GameObject bullet1;
+    [SerializeField]
+    private GameObject bullet2;
+
+    private void Awake()
+    {
+        myBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
+
+    // Use this for initialization
+    void Start () {
+        shootPoint = transform.Find("ShootPoint");
+	}
+	
+	// Update is called once per frame
+	void FixedUpdate () {
+        PlayerKeyBoard();
+	}
+
+    void PlayerKeyBoard()
+    {
+        float forceX = 0f;
+        float forceY = 0f;
+        float h = Input.GetAxisRaw("Horizontal");
+
+        if (h > 0)
+        {
+            if (myBody.velocity.x < maxVelocity)
+            {
+                if (grounded)
+                {
+                    forceX = moveForce;
+                    if (pushed)
+                    {
+                        anim.SetBool("Push", true);
+                    }
+                    else
+                    {
+                        anim.SetBool("Walk", true);
+                    }
+                }
+                else
+                {
+                    forceX = moveForce * 0.5f;
+                }
+            }
+            Vector3 scale = transform.localScale;
+            scale.x = 1f;
+            transform.localScale = scale;
+        }
+        else if (h < 0)
+        {
+            if(myBody.velocity.x > -maxVelocity)
+            {
+                if (grounded)
+                {
+                    forceX = -moveForce;
+                    if (pushed)
+                    {
+                        anim.SetBool("Push", true);
+                    }
+                    else
+                    {
+                        anim.SetBool("Walk", true);
+                    }
+                }
+                else
+                {
+                    forceX = -moveForce * 0.5f;
+                }
+            }
+            Vector3 scale = transform.localScale;
+            scale.x = -1f;
+            transform.localScale = scale;
+        }
+        else if (h == 0)
+        {
+            anim.SetBool("Walk", false);
+            anim.SetBool("Push", false);
+            myBody.velocity = new Vector2(0, myBody.velocity.y);
+        }
+
+        if (Input.GetKey(KeyCode.K) && !anim.GetBool("Throw"))
+        {
+            if (grounded)
+            {
+                grounded = false;
+                forceY = jumpForce;
+                anim.SetBool("Walk", false);
+                anim.SetBool("Push", false);
+                anim.SetBool("Fly", false);
+                anim.SetBool("Jump", true);
+            }
+        }
+        else if (Input.GetKey(KeyCode.J))
+        {
+            if (!anim.GetBool("Fly") && !anim.GetBool("Push") && !anim.GetBool("Jump"))
+            {
+                anim.SetBool("Throw", true);
+                StartCoroutine(Attack());
+            }
+        }
+        if(Input.GetKeyUp(KeyCode.J))
+        {
+            anim.SetBool("Throw", false);
+        }
+
+        myBody.AddForce(new Vector2(forceX, forceY));
+    }
+
+    IEnumerator Attack()
+    {
+        if (bullet)
+        {
+            bullet = !bullet;
+            Instantiate(bullet1, shootPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            bullet = !bullet;
+            Instantiate(bullet2, shootPoint.position, Quaternion.identity);
+        }
+        yield return new WaitForSeconds(.3f);  
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            grounded = true;
+            anim.SetBool("Jump", false);
+            anim.SetBool("Fly", false);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            pushed = true;
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(pushForce, gameObject.GetComponent<Rigidbody2D>().velocity.y));
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            if (!anim.GetBool("Jump"))
+            {
+                anim.SetBool("Fly", true);
+            }
+        }
+        if (collision.gameObject.tag == "Item")
+        {
+            pushed = false;
+            anim.SetBool("Push", false);
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        }
+    }
+}
