@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     public float speed = 10f;
+    public int dmg = 10;
 
     private bool direction;
     private GameObject player;
@@ -61,6 +62,11 @@ public class Bullet : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Item")
         {
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Freeze")
+        {
+            collision.SendMessageUpwards("Damage", dmg);
             Destroy(gameObject);
         }
     }

@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
     public float damage = 10f;
     public Transform shootPoint;
 
-    private bool grounded, pushed, bullet = false;
+    private bool grounded, pushed, bullet = false, keyupJ = true, keyupK = true;
     private Rigidbody2D myBody;
     private Animator anim;
     [SerializeField]
@@ -100,26 +100,32 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.K) && !anim.GetBool("Throw"))
         {
-            if (grounded)
+            if (grounded && keyupK && !anim.GetBool("Jump"))
             {
                 grounded = false;
+                keyupK = false;
                 forceY = jumpForce;
                 anim.SetBool("Walk", false);
                 anim.SetBool("Push", false);
-                anim.SetBool("Fly", false);
                 anim.SetBool("Jump", true);
             }
         }
         else if (Input.GetKey(KeyCode.J))
         {
-            if (!anim.GetBool("Fly") && !anim.GetBool("Push") && !anim.GetBool("Jump"))
+            if (!anim.GetBool("Fly") && !anim.GetBool("Push") && !anim.GetBool("Jump") && keyupJ)
             {
+                keyupJ = false;
                 anim.SetBool("Throw", true);
                 StartCoroutine(Attack());
             }
         }
-        if(Input.GetKeyUp(KeyCode.J))
+        else if (Input.GetKeyUp(KeyCode.K))
         {
+            keyupK = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.J))
+        {
+            keyupJ = true;
             anim.SetBool("Throw", false);
         }
 
@@ -143,17 +149,26 @@ public class Player : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Freeze")
         {
             grounded = true;
-            anim.SetBool("Jump", false);
-            anim.SetBool("Fly", false);
+            //xử lý việc khi nhảy xuyên qua ground trong trạng thái đang rơi mới set jump = false
+            if (myBody.velocity.y < 0)
+            {
+                anim.SetBool("Jump", false);
+                anim.SetBool("Fly", false);
+                if(collision.gameObject.tag == "Freeze")
+                {
+                    pushed = false;
+                }
+            }
+
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Freeze")
         {
             pushed = true;
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(pushForce, gameObject.GetComponent<Rigidbody2D>().velocity.y));
@@ -162,18 +177,19 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        //xử lý animation fly
+        if (collision.gameObject.tag == "Ground" && myBody.velocity.y < -3f)
         {
             if (!anim.GetBool("Jump"))
             {
                 anim.SetBool("Fly", true);
             }
         }
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Freeze")
         {
             pushed = false;
             anim.SetBool("Push", false);
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
     }
 }
