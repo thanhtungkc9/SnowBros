@@ -152,17 +152,26 @@ public class Player : MonoBehaviour {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Freeze")
         {
             grounded = true;
+            anim.SetBool("Fly", false);
             //xử lý việc khi nhảy xuyên qua ground trong trạng thái đang rơi mới set jump = false
-            if (myBody.velocity.y < 0)
+            if (myBody.velocity.y <= 0)
             {
                 anim.SetBool("Jump", false);
-                anim.SetBool("Fly", false);
                 if(collision.gameObject.tag == "Freeze")
                 {
                     pushed = false;
                 }
             }
-
+        }
+        if (collision.gameObject.tag == "Freeze4")
+        {
+            if(transform.localScale.x == 1f)
+            {
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(pushForce * 500f, 0), transform.position);
+            }else if (transform.localScale.x == -1f)
+            {
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(-pushForce * 500f, 0), transform.position);
+            }
         }
     }
 
