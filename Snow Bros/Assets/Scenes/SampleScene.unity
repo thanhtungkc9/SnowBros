@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 204338876}
   m_Layer: 0
   m_Name: Background_1 (11)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,73 +203,6 @@ SpriteRenderer:
   m_Size: {x: 0.82, y: 1.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
---- !u!1 &232676214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 232676217}
-  - component: {fileID: 232676216}
-  - component: {fileID: 232676215}
-  m_Layer: 0
-  m_Name: sizeJump
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &232676215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 232676214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9939127fae991848b76bdadb8c29e9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sizeJump: 0
---- !u!61 &232676216
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 232676214}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01905638, y: 0.57169247}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5045332, y: 2.2958374}
-  m_EdgeRadius: 0
---- !u!4 &232676217
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 232676214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1489053306}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &239367778
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +215,7 @@ GameObject:
   - component: {fileID: 239367780}
   m_Layer: 0
   m_Name: Background_1 (10)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +538,7 @@ GameObject:
   - component: {fileID: 342008282}
   m_Layer: 0
   m_Name: Background_1 (8)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,6 +667,60 @@ Transform:
   - {fileID: 1971732632}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &457791316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 457791318}
+  - component: {fileID: 457791317}
+  m_Layer: 0
+  m_Name: Die
+  m_TagString: Die
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &457791317
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457791316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.34688663, y: 0.12243128}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.303915, y: 0.18379307}
+  m_EdgeRadius: 0
+--- !u!4 &457791318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457791316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8247526, y: -5.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -934,7 +921,7 @@ GameObject:
   - component: {fileID: 536443591}
   m_Layer: 0
   m_Name: Background_1 (7)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1029,7 +1016,7 @@ GameObject:
   - component: {fileID: 553007022}
   m_Layer: 0
   m_Name: Background_1 (5)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,7 +1111,7 @@ GameObject:
   - component: {fileID: 563822093}
   m_Layer: 0
   m_Name: Background_1 (4)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,7 +1617,7 @@ GameObject:
   - component: {fileID: 974578462}
   m_Layer: 0
   m_Name: Background_1
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1839,7 +1826,7 @@ GameObject:
   - component: {fileID: 1116075555}
   m_Layer: 0
   m_Name: Background_1 (1)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2143,7 +2130,7 @@ GameObject:
   - component: {fileID: 1260236948}
   m_Layer: 0
   m_Name: Background_1 (6)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2352,7 +2339,7 @@ GameObject:
   - component: {fileID: 1398792371}
   m_Layer: 0
   m_Name: Background_1 (2)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2588,19 +2575,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114049847077924110, guid: 6f7422e07f1d820478bd44f0256347bd,
-        type: 2}
-      propertyPath: sizeJump
-      value: 
-      objectReference: {fileID: 232676214}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f7422e07f1d820478bd44f0256347bd, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1489053306 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4951083522561180, guid: 6f7422e07f1d820478bd44f0256347bd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1489053305}
 --- !u!1 &1593504968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,7 +3027,7 @@ GameObject:
   - component: {fileID: 1969244081}
   m_Layer: 0
   m_Name: Background_1 (3)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3487,7 +3464,7 @@ GameObject:
   - component: {fileID: 2134021717}
   m_Layer: 0
   m_Name: Background_1 (9)
-  m_TagString: Untagged
+  m_TagString: Tuong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

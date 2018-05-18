@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Freeze
   - Freeze4
+  - Tuong
+  - Die
   layers:
   - Default
   - TransparentFX
