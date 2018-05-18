@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 4e310598b8821ae47af8f85e89920bb8
+timeCreated: 1526635995
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Untitled_0
+    21300002: Untitled_1
+    21300004: Untitled_2
+    21300006: Untitled_3
+    21300008: Untitled_4
+    21300010: Untitled_5
+    21300012: Untitled_6
+    21300014: Untitled_7
+    21300016: Untitled_8
+    21300018: Untitled_9
+    21300020: Untitled_10
+    21300022: Untitled_11
+    21300024: Untitled_12
+    21300026: Untitled_13
+    21300028: Untitled_14
+    21300030: Untitled_15
+    21300032: Untitled_16
+    21300034: Untitled_17
+    21300036: Untitled_18
+    21300038: Untitled_19
+    21300040: Untitled_20
+    21300042: Untitled_21
+    21300044: Untitled_22
+    21300046: Untitled_23
+    21300048: Untitled_24
+    21300050: Untitled_25
+    21300052: Untitled_26
+    21300054: Untitled_27
+    21300056: Untitled_28
+    21300058: Untitled_29
+    21300060: Untitled_30
+    21300062: Untitled_31
+    21300064: Untitled_32
+    21300066: Untitled_33
+    21300068: Untitled_34
+    21300070: Untitled_35
+    21300072: Untitled_36
+    21300074: Untitled_37
+    21300076: Untitled_38
+    21300078: Untitled_39
+    21300080: Untitled_40
+    21300082: Untitled_41
+    21300084: Untitled_42
+    21300086: Untitled_43
+    21300088: Untitled_44
+    21300090: Untitled_45
+    21300092: Untitled_46
+    21300094: Untitled_47
+    21300096: Untitled_48
+    21300098: Untitled_49
+    21300100: Untitled_50
+    21300102: Untitled_51
+    21300104: Untitled_52
+    21300106: Untitled_53
+    21300108: Untitled_54
+    21300110: Untitled_55
+    21300112: Untitled_56
+    21300114: Untitled_57
+    21300116: Untitled_58
+    21300118: Untitled_59
+    21300120: Untitled_60
+    21300122: Untitled_61
+    21300124: Untitled_62
+    21300126: Untitled_63
+    21300128: Untitled_64
+    21300130: Untitled_65
+    21300132: Untitled_66
+    21300134: Untitled_67
+    21300136: Untitled_68
+    21300138: Untitled_69
+    21300140: Untitled_70
+    21300142: Untitled_71
+    21300144: Untitled_72
+    21300146: Untitled_73
+    21300148: Untitled_74
+    21300150: Untitled_75
+    21300152: Untitled_76
+    21300154: Untitled_77
+    21300156: Untitled_78
+    21300158: Untitled_79
+    21300160: Untitled_80
+    21300162: Untitled_81
+    21300164: Untitled_82
+    21300166: Untitled_83
+    21300168: Untitled_84
+    21300170: Untitled_85
+    21300172: Untitled_86
+    21300174: Untitled_87
+    21300176: Untitled_88
+    21300178: Untitled_89
+    21300180: Untitled_90
+    21300182: Untitled_91
+    21300184: Untitled_92
+    21300186: Untitled_93
+    21300188: Untitled_94
+    21300190: Untitled_95
+    21300192: Untitled_96
+    21300194: Untitled_97
+    21300196: Untitled_98
+    21300198: Untitled_99
+    21300200: Untitled_100
+    21300202: Untitled_101
+    21300204: Untitled_102
+    21300206: Untitled_103
+    21300208: Untitled_104
+    21300210: Untitled_105
+    21300212: Untitled_106
+    21300214: Untitled_107
+    21300216: Untitled_108
+    21300218: Untitled_109
+    21300220: Untitled_110
+    21300222: Untitled_111
+    21300224: Untitled_112
+    21300226: Untitled_113
+    21300228: Untitled_114
+    21300230: Untitled_115
+    21300232: Untitled_116
+    21300234: Untitled_117
+    21300236: Untitled_118
+    21300238: Untitled_119
+    21300240: Untitled_120
+    21300242: Untitled_121
+    21300244: Untitled_122
+    21300246: Untitled_123
+    21300248: Untitled_124
+    21300250: Untitled_125
+    21300252: Untitled_126
+    21300254: Untitled_127
+    21300256: Untitled_128
+    21300258: Untitled_129
+    21300260: Untitled_130
+    21300262: Untitled_131
+    21300264: Untitled_132
+    21300266: Untitled_133
+    21300268: Untitled_134
+    21300270: Untitled_135
+    21300272: Untitled_136
+    21300274: Untitled_137
+    21300276: Untitled_138
+    21300278: Untitled_139
+    21300280: Untitled_140
+    21300282: Untitled_141
+    21300284: Untitled_142
+    21300286: Untitled_143
+    21300288: Untitled_144
+    21300290: Untitled_145
+    21300292: Untitled_146
+    21300294: Untitled_147
+    21300296: Untitled_148
+    21300298: Untitled_149
+    21300300: Untitled_150
+    21300302: Untitled_151
+    21300304: Untitled_152
+    21300306: Untitled_153
+    21300308: Untitled_154
+    21300310: Untitled_155
+    21300312: Untitled_156
+    21300314: Untitled_157
+    21300316: Untitled_158
+    21300318: Untitled_159
+    21300320: Untitled_160
+    21300322: Untitled_161
+    21300324: Untitled_162
+    21300326: Untitled_163
+    21300328: Untitled_164
+    21300330: Untitled_165
+    21300332: Untitled_166
+    21300334: Untitled_167
+    21300336: Untitled_168
+    21300338: Untitled_169
+    21300340: Untitled_170
+    21300342: Untitled_171
+    21300344: Untitled_172
+    21300346: Untitled_173
+    21300348: Background_0
+    21300350: Background_1
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Background_0
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 592
+        width: 102
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Background_1
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 468
+        width: 41
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

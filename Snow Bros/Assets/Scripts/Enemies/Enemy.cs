@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     private GameObject bullet;
     [SerializeField]
+    private GameObject sizeJump;
+    [SerializeField]
     private PhysicsMaterial2D material;
     private bool collision, ground = true, isFreeze = false, attack = false;
     private bool bulleting = false; //xử lý việc chỉ cho enemy bắn 1 viên đạn 1 lần
@@ -192,7 +194,7 @@ public class Enemy : MonoBehaviour {
                 if (!attack)
                 {
                     Move();
-                    if (timeJump > Random.Range(7f, 15f))
+                    if (timeJump > Random.Range(1f, 5f) && sizeJump.GetComponent<SizeJumpEnemy>().sizeJump)
                     {
                         Jump();
                         timeJump = 0;

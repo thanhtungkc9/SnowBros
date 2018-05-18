@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1195959710245308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5945992, y: 2.71, z: 0}
+  m_LocalPosition: {x: -3.56, y: 2.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4684101181078182}
@@ -170,7 +170,7 @@ MonoBehaviour:
   bulletPos: {fileID: 4168246030745224}
   bullet: {fileID: 1033623948227208, guid: 864f97f8b60b33846aaff68da4c83df6, type: 2}
   material: {fileID: 6200000, guid: 6aeaa0a6a9d7dbb41965f9a176a4ac30, type: 2}
-  speed: 6
+  speed: 5
   forceY: 2000
   isLive: 1
 --- !u!212 &212046535520367830
