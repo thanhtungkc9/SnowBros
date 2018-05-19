@@ -173,10 +173,6 @@ public class Player : MonoBehaviour {
                 collision.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(-pushForce * 500f, 0), transform.position);
             }
         }
-        if(collision.gameObject.tag == "Enemy")
-        {
-            collision.gameObject.GetComponent<EnemyDie>().Die();
-        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

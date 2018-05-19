@@ -48,6 +48,26 @@ public class EnemyFreeze : MonoBehaviour {
         }
 	}
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (gameObject.tag == "Freeze4" && collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyDie>().Die();
+        }
+        if (gameObject.tag == "Freeze4" && collision.gameObject.tag == "Ground")
+        {
+            myBody.velocity = new Vector2(myBody.velocity.x, 0);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(gameObject.tag == "Freeze4" && collision.gameObject.tag == "Ground")
+        {
+            myBody.velocity = new Vector2(myBody.velocity.x, 0);
+        }
+    }
+
     void AnimationFreeze(int lvfreeze)
     {
         isFreeze = true;

@@ -2,19 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreenEnemyAI : MonoBehaviour {
-
-    [SerializeField]
-    private GameObject bullet;
-    [SerializeField]
-    private Transform bulletPos;
-    public bool attack = false; //kiểm tra xem enemy có đang tấn công hay không
+public class RedEnemyAI : MonoBehaviour {
 
     private Enemy enemy;
     private Animator anim;
     private Transform playerTranform;
-
-    private bool bulleting = false; //xử lý việc chỉ cho enemy bắn 1 viên đạn 1 lần
 
     private void Awake()
     {
@@ -38,18 +30,6 @@ public class GreenEnemyAI : MonoBehaviour {
         }
     }
 
-    IEnumerator Attack()
-    {
-        anim.SetBool("Walk", false);
-        yield return new WaitForSeconds(1f);
-        anim.SetBool("Attack", true);
-        if (!bulleting)
-        {
-            bulleting = true;
-            Instantiate(bullet, bulletPos.position, Quaternion.identity);
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Tuong" && !GetComponent<EnemyFreeze>().isFreeze)
@@ -57,11 +37,6 @@ public class GreenEnemyAI : MonoBehaviour {
             if (enemy.flyAI || !enemy.sizeJump.GetComponent<SizeJumpEnemy>().sizeJump)
                 ChangeDirection();//khi enemy dung cao hon player se tim noi de nhay xuong neu dung phai tuong se quay dau
         }
-    }
-
-    void DelayAttack()
-    {
-        attack = false;
     }
 
     void ChangeDirection()
@@ -79,11 +54,6 @@ public class GreenEnemyAI : MonoBehaviour {
                 temp.x = 1f;
             }
             transform.localScale = temp;
-            attack = true;
-            bulleting = false;
-            enemy.timeAI = 0;
-            StartCoroutine(Attack());
-            Invoke("DelayAttack", 2f);
         }
     }
 
@@ -92,10 +62,15 @@ public class GreenEnemyAI : MonoBehaviour {
         if (!GetComponent<EnemyFreeze>().isFreeze)
         {
             enemy.timeAI += Time.deltaTime;
-            if (enemy.ground && !attack)
+            if (enemy.ground)
             {
                 enemy.Move();
-                if (enemy.timeAI > 7f)
+                if (enemy.timeAI > .5f)
+                {
+                    anim.SetBool("Roll", false);
+                }
+
+                if (enemy.timeAI > 3f)
                 {
                     enemy.sizeY = transform.position.y - playerTranform.position.y;
                     if (enemy.sizeY < -1f && enemy.sizeJump.GetComponent<SizeJumpEnemy>().sizeJump)
@@ -105,11 +80,8 @@ public class GreenEnemyAI : MonoBehaviour {
                     }
                     else if (enemy.sizeY > -1f && enemy.sizeY < 1f)
                     {
-                        attack = true;
                         enemy.timeAI = 0;
-                        bulleting = false;
-                        StartCoroutine(Attack());
-                        Invoke("DelayAttack", 2f);
+                        anim.SetBool("Roll", true);
                     }
                     else if (enemy.sizeY > 1f)
                     {

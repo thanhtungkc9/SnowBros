@@ -39,10 +39,33 @@ public class Enemy : MonoBehaviour {
             }
         }
 
-        if (collision.gameObject.tag == "Enemy")
+        if (gameObject.tag != "Freeze4")
         {
-            myBody.gravityScale = 0;
-            cirCollider.isTrigger = true;
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Freeze")
+            {
+                //2 enemy di cùng chiều nhau thì 1 trong 2 con sẽ đổi chiều
+                if (transform.localScale.x == collision.transform.localScale.x)
+                {
+                    if (transform.localScale.x == 1f)
+                    {
+                        Vector2 temp = transform.localScale;
+                        temp.x = -1f;
+                        transform.localScale = temp;
+                    }
+                    else if (collision.transform.localScale.x == 1f)
+                    {
+                        Vector2 temp = collision.transform.localScale;
+                        temp.x = -1f;
+                        collision.transform.localScale = temp;
+                    }
+                }
+                //2 enemy đi ngược chiều nhau thì sẽ lướt qua nhau
+                else
+                {
+                    myBody.gravityScale = 0;
+                    cirCollider.isTrigger = true;
+                }
+            }
         }
     }
 
@@ -62,7 +85,7 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Freeze")
         {
             myBody.gravityScale = 20;
             cirCollider.isTrigger = false;
@@ -87,42 +110,4 @@ public class Enemy : MonoBehaviour {
         myBody.velocity = new Vector2(0, myBody.velocity.y);
         myBody.AddForce(new Vector2(0, forceY));
     }
-
-    //void Live()
-    //{
-    //    if (!GetComponent<EnemyFreeze>().isFreeze)
-    //    {
-    //        timeAI += Time.deltaTime;
-    //        if (ground && !attack)
-    //        {
-    //            Move();
-    //            //if (timeAI > .5f)
-    //            //{
-    //            //    anim.SetBool("Roll", false);
-    //            //}
-    //            if (timeAI > 3f)
-    //            {
-    //                sizeY = transform.position.y - playerTranform.position.y;
-    //                if (sizeY < -1f && sizeJump.GetComponent<SizeJumpEnemy>().sizeJump)
-    //                {
-    //                    timeAI = 0;
-    //                    Jump();
-    //                }
-    //                //else if (sizeY > -1f && sizeY < 1f)
-    //                //{
-    //                //    timeAI = 0;
-    //                //    anim.SetBool("Roll", true);
-    //                //}
-    //                else if (sizeY > 1f)
-    //                {
-    //                    flyAI = true;
-    //                }
-    //            }
-    //            else if (!flyAI)
-    //            {
-    //                ChangeDirection();
-    //            }
-    //        }
-    //    }
-    //}
 }

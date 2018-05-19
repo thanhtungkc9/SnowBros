@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114049847077924110}
   - component: {fileID: 114516069849565300}
   - component: {fileID: 114243187793439098}
+  - component: {fileID: 114881941034168054}
   m_Layer: 0
   m_Name: RedEnemy
   m_TagString: Enemy
@@ -241,6 +242,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeJump: 0
+--- !u!114 &114881941034168054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134467445762516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628a81f79b5063b4c9a101dc073d484f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212035532589006366
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -272,7 +284,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: cab0376d3bea02d438f4cc25dff5d11d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

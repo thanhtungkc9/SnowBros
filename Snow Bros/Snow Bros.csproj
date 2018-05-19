@@ -84,7 +84,9 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyFreeze.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\BulletFire.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\SizeJumpEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyAI.cs" />
     <Compile Include="Assets\Scripts\Player\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
   </ItemGroup>
