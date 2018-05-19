@@ -29,7 +29,7 @@ public class BulletFire : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         StartCoroutine(FLy());
-        Destroy(gameObject, 2.5f);
+        Destroy(gameObject, .8f);
     }
 
     IEnumerator FLy()
@@ -57,8 +57,9 @@ public class BulletFire : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Enemy")
+        if(collision.gameObject.tag == "Tuong" || collision.gameObject.tag == "Player")
         {
+            Debug.Log("BulletFire collider");
             Destroy(gameObject);
         }
     }

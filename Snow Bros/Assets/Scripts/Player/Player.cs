@@ -175,7 +175,7 @@ public class Player : MonoBehaviour {
         }
         if(collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<Enemy>().Die();
+            collision.gameObject.GetComponent<EnemyDie>().Die();
         }
     }
 

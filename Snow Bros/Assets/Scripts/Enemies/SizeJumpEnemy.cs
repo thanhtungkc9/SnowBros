@@ -10,7 +10,7 @@ public class SizeJumpEnemy : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Ground")
         {
-            sizeJump = true;
+            Invoke("SizeJump", .2f);
         }
     }
 
@@ -20,5 +20,10 @@ public class SizeJumpEnemy : MonoBehaviour {
         {
             sizeJump = false;
         }
+    }
+
+    void SizeJump()
+    {
+        sizeJump = true;
     }
 }

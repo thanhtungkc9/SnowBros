@@ -11,6 +11,7 @@ TagManager:
   - Freeze4
   - Tuong
   - Die
+  - SizeJump
   layers:
   - Default
   - TransparentFX

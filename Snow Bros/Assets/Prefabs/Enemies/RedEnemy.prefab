@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 50640083724292474}
   - component: {fileID: 58154441318901852}
   - component: {fileID: 114049847077924110}
+  - component: {fileID: 114516069849565300}
+  - component: {fileID: 114243187793439098}
   m_Layer: 0
   m_Name: RedEnemy
   m_TagString: Enemy
@@ -194,13 +196,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 4951083522561180}
   endPos: {fileID: 4731769277745742}
-  bulletPos: {fileID: 0}
-  bullet: {fileID: 0}
   sizeJump: {fileID: 1895415891400522}
-  material: {fileID: 6200000, guid: 6aeaa0a6a9d7dbb41965f9a176a4ac30, type: 2}
   speed: 5
   forceY: 2000
+  timeAI: 0
+  sizeY: 0
+  collision: 0
+  ground: 1
+  flyAI: 0
   isLive: 1
+--- !u!114 &114243187793439098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134467445762516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360cf79058230f14db58d355a7b962e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114516069849565300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134467445762516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5135f1370a2e042b82fba966a17109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 6200000, guid: 6aeaa0a6a9d7dbb41965f9a176a4ac30, type: 2}
+  isFreeze: 0
 --- !u!114 &114757506003195056
 MonoBehaviour:
   m_ObjectHideFlags: 1
