@@ -156,7 +156,6 @@ MonoBehaviour:
   moveForce: 150
   maxVelocity: 5
   grounded: 0
-  pushed: 0
   bullet: 0
   keyupJ: 1
   keyupK: 1
