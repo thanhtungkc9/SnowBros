@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     private GameObject bullet2;
 
-    public float jumpForce = 700f;
+    public float jumpForce = 1550f;
     public float moveXVelocity = 100f;
     public float moveForce = 150f;
     public float maxVelocity = 3f;
@@ -88,7 +88,7 @@ public class PlayerScript : MonoBehaviour {
         {
             playerAnimator.SetInteger("CurrentState", STATE_PUSH);
         }
-        if ((target.gameObject.tag == "Ground" || target.gameObject.tag == "Freeze4")&&playerBody.velocity.y <= 0&&grounded==false)
+        if ((target.gameObject.tag == "Ground" || target.gameObject.tag == "Freeze4"))
         {
             grounded = true;
 
@@ -113,6 +113,19 @@ public class PlayerScript : MonoBehaviour {
         if (target.gameObject.tag == "Ground" && playerBody.velocity.y < -3f)
         {
             grounded = false;
+        }
+        else
+             if (target.gameObject.tag == "Freeze4" && playerAnimator.GetInteger("CurrentState") == STATE_PUSH)
+        {
+            playerAnimator.SetInteger("CurrentState", STATE_WALK);
+        }
+    }
+    void OnCollisionStay2D(Collision2D target)
+    {
+        //
+        if (target.gameObject.tag == "Freeze4" &&playerAnimator.GetInteger("CurrentState")==STATE_WALK)
+        {
+            playerAnimator.SetInteger("CurrentState", STATE_PUSH);
         }
     }
 
