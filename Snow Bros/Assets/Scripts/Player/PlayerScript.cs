@@ -26,15 +26,16 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     private GameObject bullet2;
 
-    public float jumpForce = 1550f;
+    public float jumpForce = 1700f;
     public float moveXVelocity = 100f;
     public float moveForce = 150f;
     public float maxVelocity = 3f;
-    public bool grounded, bullet = false, keyupJ = true, keyupK = true;
+    public bool grounded=false, bullet = false, keyupJ = true, keyupK = true;
     void Awake()
     {
         playerBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+
     }
 
     // Use this for initialization
@@ -43,7 +44,7 @@ public class PlayerScript : MonoBehaviour {
     }
     // Update is called once per frame
     void Update() {
-        Keyboard_Move();
+        Keyboard_Move();       
        
     }
 
@@ -79,7 +80,7 @@ public class PlayerScript : MonoBehaviour {
             playerAnimator.SetBool("RunThrow", false);
             playerAnimator.SetBool("Throw", false);
         }
-    }
+    } //cái này k xài
 
     void OnCollisionEnter2D(Collision2D target)
     {
@@ -88,17 +89,17 @@ public class PlayerScript : MonoBehaviour {
         {
             playerAnimator.SetInteger("CurrentState", STATE_PUSH);
         }
-        if ((target.gameObject.tag == "Ground" || target.gameObject.tag == "Freeze4"))
+        Debug.Log(playerBody.velocity.y);
+        if ((target.gameObject.tag == "Ground" || target.gameObject.tag == "Freeze4")&&playerBody.velocity.y < 0.1f)
         {
             grounded = true;
-
-            Debug.Log("Collision with ground");
             float h = Input.GetAxisRaw("Horizontal");
+            Debug.Log("+  " + h);
              if (h != 0)
             {
                 playerAnimator.SetInteger("CurrentState", STATE_WALK);
             }
-            else if (h == 0)
+            else 
             {
 
                 playerAnimator.SetInteger("CurrentState", STATE_IDLE);
@@ -109,12 +110,10 @@ public class PlayerScript : MonoBehaviour {
 
     void OnCollisionExit2D(Collision2D target)
     {
-        //
-        if (target.gameObject.tag == "Ground" && playerBody.velocity.y < -3f)
+        if ((target.gameObject.tag=="Ground" || target.gameObject.tag == "Freeze4") )
         {
             grounded = false;
         }
-        else
              if (target.gameObject.tag == "Freeze4" && playerAnimator.GetInteger("CurrentState") == STATE_PUSH)
         {
             playerAnimator.SetInteger("CurrentState", STATE_WALK);
@@ -122,7 +121,7 @@ public class PlayerScript : MonoBehaviour {
     }
     void OnCollisionStay2D(Collision2D target)
     {
-        //
+    
         if (target.gameObject.tag == "Freeze4" &&playerAnimator.GetInteger("CurrentState")==STATE_WALK)
         {
             playerAnimator.SetInteger("CurrentState", STATE_PUSH);
@@ -154,6 +153,7 @@ public class PlayerScript : MonoBehaviour {
                     forceX = moveForce * 0.5f;
                 }
             }
+            playerBody.AddForce(new Vector2(forceX, forceY));
         }
         else if (h < 0)
         {
@@ -171,12 +171,13 @@ public class PlayerScript : MonoBehaviour {
                     forceX = -moveForce * 0.5f;
                 }
             }
+            playerBody.AddForce(new Vector2(forceX, forceY));
         }
         else if (h == 0)
         {
-            forceX = 0;
+            playerBody.velocity=new Vector2(0,playerBody.velocity.y);
         }
-        playerBody.AddForce(new Vector2(forceX, forceY));
+       
 
     }
 

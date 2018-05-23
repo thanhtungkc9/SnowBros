@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 95880102694345434}
   - component: {fileID: 114518069870577074}
   - component: {fileID: 50643579511008810}
-  - component: {fileID: 68457036359261704}
+  - component: {fileID: 68976543522446662}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1503176589078310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3647346, y: -3.3926215, z: 0}
+  m_LocalPosition: {x: -4.28, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4102967348703738}
@@ -84,16 +84,16 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 15
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!68 &68457036359261704
+--- !u!68 &68976543522446662
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,28 +108,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.2282219, y: 0.0055651665}
-  - {x: 0.30820513, y: 0.006876707}
-  - {x: 0.30421782, y: 0.04276347}
-  - {x: 0.22825956, y: 0.09567356}
-  - {x: 0.27920532, y: 0.22582984}
-  - {x: 0.34497356, y: 0.3089993}
-  - {x: 0.34229946, y: 0.45732808}
-  - {x: 0.2725401, y: 0.5375159}
-  - {x: 0.2835145, y: 0.6866417}
-  - {x: 0.22293425, y: 0.7563071}
-  - {x: 0.03442526, y: 0.83543515}
-  - {x: -0.012049198, y: 0.8238778}
-  - {x: -0.06769228, y: 0.88957596}
-  - {x: -0.1789937, y: 0.8030522}
-  - {x: -0.15087509, y: 0.70757747}
-  - {x: -0.15467739, y: 0.6290319}
-  - {x: -0.24744177, y: 0.635164}
-  - {x: -0.33617544, y: 0.5797198}
-  - {x: -0.33665848, y: 0.39498353}
-  - {x: -0.23328257, y: 0.2800045}
-  - {x: -0.13372374, y: 0.116589546}
-  - {x: -0.2293458, y: 0.005834818}
+  - {x: 0.3199904, y: 0.023502052}
+  - {x: 0.2690177, y: 0.005648136}
+  - {x: -0.2654078, y: -0.0008070469}
+  - {x: -0.3120129, y: 0.02865991}
+  - {x: -0.30732083, y: 0.88772845}
+  - {x: 0.3274417, y: 0.8912678}
+  - {x: 0.31022644, y: 0.012494564}
 --- !u!95 &95880102694345434
 Animator:
   serializedVersion: 3
@@ -166,7 +151,7 @@ MonoBehaviour:
   jumpForce: 1700
   moveXVelocity: 100
   moveForce: 150
-  maxVelocity: 5
+  maxVelocity: 3
   grounded: 0
   bullet: 0
   keyupJ: 1
@@ -203,8 +188,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1572147551
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8de440c6f24584aaae6ae645781f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

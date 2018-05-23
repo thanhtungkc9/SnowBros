@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    public float speed = 10f;
+    public float speed = 8f;
     public int dmg = 10;
-    public float forceX=400f;
-    public float forceY=-150f;
+    public float forceX=4.0f;
+    public float forceY=1.0f;
 
 
     private bool direction;
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour {
             Vector3 scale = transform.localScale;
             scale.x = 1f;
             transform.localScale = scale;
-            
+            bullet.AddForce(new Vector2(forceX, forceY));
         }
         else if (player.transform.localScale.x == -1f)
         {
@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour {
             scale.x = -1f;
             transform.localScale = scale;
             ;
-            //bullet.AddForce(new Vector2(-forceX, forceY));
+            bullet.AddForce(new Vector2(-forceX, forceY));
           //  bullet.velocity = new Vector2(-1f, 0f);
 
         }
@@ -50,6 +50,18 @@ public class Bullet : MonoBehaviour {
 
     IEnumerator Fly()
     {
+        if (direction)
+        {
+
+            
+        }
+        else
+        {
+
+            
+        }
+        yield return new WaitForSeconds(.2f);
+        /*
         if (direction)
         {
            
@@ -67,12 +79,12 @@ public class Bullet : MonoBehaviour {
         yield return new WaitForSeconds(.2f);
        // Vector2 newPos = transform.position;
       //  newPos = new Vector2(newPos.x, newPos.y - speed * Time.deltaTime);
-       // transform.position = newPos;
+       // transform.position = newPos;*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Item" || collision.gameObject.tag == "Wall")
         {
             Destroy(gameObject);
         }

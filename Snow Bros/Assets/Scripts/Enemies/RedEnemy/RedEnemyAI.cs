@@ -32,7 +32,7 @@ public class RedEnemyAI : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Tuong" && !GetComponent<EnemyFreeze>().isFreeze)
+        if (collision.gameObject.tag == "Wall" && !GetComponent<EnemyFreeze>().isFreeze)
         {
             if (enemy.flyAI || !enemy.sizeJump.GetComponent<SizeJumpEnemy>().sizeJump)
                 ChangeDirection();//khi enemy dung cao hon player se tim noi de nhay xuong neu dung phai tuong se quay dau

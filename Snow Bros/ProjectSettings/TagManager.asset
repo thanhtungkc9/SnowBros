@@ -12,6 +12,7 @@ TagManager:
   - Tuong
   - Die
   - SizeJump
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4514986390800176}
   - component: {fileID: 212991602565706678}
-  - component: {fileID: 61252046527522326}
   - component: {fileID: 114528501806280636}
   - component: {fileID: 50395484785417122}
+  - component: {fileID: 68179064643517460}
   m_Layer: 0
   m_Name: bullet1
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029634809998160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9175773, y: -2.7826943, z: 0}
+  m_LocalPosition: {x: -2.51, y: -0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,17 +54,17 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.3
+  m_GravityScale: 0.4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61252046527522326
-BoxCollider2D:
+--- !u!68 &68179064643517460
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,18 +76,31 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.23333333, y: 0.36666667}
-    newSize: {x: 0.23333333, y: 0.36666667}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.28, y: 0.44}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.11308932, y: 0.0038229227}
+  - {x: 0.022522688, y: 0.0035511255}
+  - {x: 0.027676582, y: 0.02079004}
+  - {x: 0.06140566, y: 0.050690234}
+  - {x: 0.094264746, y: 0.08032155}
+  - {x: 0.09167361, y: 0.12183213}
+  - {x: 0.112080574, y: 0.13135976}
+  - {x: 0.11346865, y: 0.24118167}
+  - {x: 0.09352374, y: 0.24728227}
+  - {x: 0.086563826, y: 0.2928239}
+  - {x: 0.057659626, y: 0.31822333}
+  - {x: 0.028678894, y: 0.36544546}
+  - {x: -0.052165747, y: 0.36579284}
+  - {x: -0.062939405, y: 0.34379128}
+  - {x: -0.08812094, y: 0.33976847}
+  - {x: -0.090106726, y: 0.32080767}
+  - {x: -0.08890486, y: 0.22737032}
+  - {x: -0.057845116, y: 0.22031689}
+  - {x: -0.057868958, y: 0.15790063}
+  - {x: -0.06188059, y: 0.13683903}
+  - {x: -0.08810806, y: 0.07801932}
+  - {x: -0.118398905, y: 0.07058412}
+  - {x: -0.117034435, y: -0.00003284216}
 --- !u!114 &114528501806280636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,10 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c763bc24dd5a4498c7f9e36ffca2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
   dmg: 10
-  forceX: 400
-  forceY: 50
+  forceX: 120
+  forceY: 15
 --- !u!212 &212991602565706678
 SpriteRenderer:
   m_ObjectHideFlags: 1

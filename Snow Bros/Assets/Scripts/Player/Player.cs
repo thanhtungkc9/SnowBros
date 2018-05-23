@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
     public float moveForce = 150f;
     public float jumpForce = 1400f;
-    public float maxVelocity = 8f;
+    public float maxVelocity = 3f;
     public float pushForce = 1f;
     public float damage = 10f;
     public Transform shootPoint;

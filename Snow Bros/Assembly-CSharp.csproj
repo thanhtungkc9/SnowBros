@@ -80,11 +80,11 @@
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/UIT/HK6/ThietKeGame/DoAn_Github/SnowBros/Snow Bros/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/UIT/HK6/ThietKeGame/DoAn_Github/SnowBros/Snow Bros/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/UIT/HK6/ThietKeGame/DoAn_Github/SnowBros/Snow Bros/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/UIT/HK6/ThietKeGame/DoAn_Github/SnowBros/Snow Bros/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/UIT/HK6/ThietKeGame/DoAn_Github/SnowBros/Snow Bros/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
