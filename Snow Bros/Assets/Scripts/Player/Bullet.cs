@@ -5,9 +5,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     public float speed = 8f;
-    public int dmg = 10;
-    public float forceX=4.0f;
-    public float forceY=1.0f;
+    public int dmg = 5;
+    public float forceX=120.0f;
+    public float forceY=15.0f;
 
 
     private bool direction;
@@ -88,8 +88,13 @@ public class Bullet : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Freeze")
+        if(collision.gameObject.tag == "Enemy" 
+            || collision.gameObject.tag == "Freeze"
+            || collision.gameObject.tag == "Boss"
+            || collision.gameObject.tag == "Freeze4")
         {
+
+            Debug.Log("Bullet with " +collision.gameObject.tag);
             collision.SendMessageUpwards("Damage", dmg);
             Destroy(gameObject);
         }

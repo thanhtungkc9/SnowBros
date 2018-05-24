@@ -35,7 +35,6 @@ public class PlayerScript : MonoBehaviour {
     {
         playerBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-
     }
 
     // Use this for initialization

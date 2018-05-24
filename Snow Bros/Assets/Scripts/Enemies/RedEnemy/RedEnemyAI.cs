@@ -4,14 +4,38 @@ using UnityEngine;
 
 public class RedEnemyAI : MonoBehaviour {
 
-    private Enemy enemy;
-    private Animator anim;
+    private Animator redEnemyAnimator;
+    public  Rigidbody2D redEnemyBody;
     private Transform playerTranform;
+
+    public bool grounded = false;
+    public bool walled = false;
+
+    public int STATE_FALL = -2;
+    public int STATE_LAND = -1;
+    public int STATE_IDLE = 0;
+    public int STATE_TURN = 2;
+    public int STATE_WALK = 1;
+    public int STATE_FREEZE1 = 3;
+    public int STATE_FREEZE2 = 4;
+    public int STATE_FREEZE3 = 5;
+    public int STATE_FREEZE4 = 6;
+    public int STATE_DIE1 = 8;
+    public int STATE_DIE2 = 9;
+    public int STATE_WAKEUP = 7;
+    public int STATE_JUMP = 10;
+    public float moveXVelocity = 100f;
+    public float moveForce = 150f;
+    public float maxVelocity = 1.5f;
+    public float time = 0.0f;
+   
+    //Enemy Infomation
+    public int Health = 100;
 
     private void Awake()
     {
-        enemy = GetComponent<Enemy>();
-        anim = GetComponent<Animator>();
+        redEnemyBody = GetComponent<Rigidbody2D>();
+        redEnemyAnimator = GetComponent<Animator>();
         playerTranform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
@@ -24,75 +48,91 @@ public class RedEnemyAI : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (enemy.isLive)
+        time += Time.deltaTime;
+        if (time > 1.0f)
         {
-            Live();
+            Health = Mathf.Min(100, Health + 4);
+            time -= 1.0f;
         }
+        if (Health<99) Animation_Freeze();
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D target)
     {
-        if (collision.gameObject.tag == "Wall" && !GetComponent<EnemyFreeze>().isFreeze)
+        if ((target.gameObject.tag == "Ground") && redEnemyBody.velocity.y < 0.1f)
         {
-            if (enemy.flyAI || !enemy.sizeJump.GetComponent<SizeJumpEnemy>().sizeJump)
-                ChangeDirection();//khi enemy dung cao hon player se tim noi de nhay xuong neu dung phai tuong se quay dau
+
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_IDLE);
+            grounded = true;
+        }
+        else
+            if (target.gameObject.tag == "Wall"&&walled==false)
+        {
+            walled = true;
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_TURN);
+        }
+        if (target.gameObject.tag == "Freeze4")
+        {
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_DIE1);
         }
     }
-
-    void ChangeDirection()
+    private void OnCollisionExit2D(Collision2D target)
     {
-        enemy.collision = Physics2D.Linecast(enemy.startPos.position, enemy.endPos.position, 1 << LayerMask.NameToLayer("Ground"));
-        if (!enemy.collision)
+        if ((target.gameObject.tag == "Ground")&& redEnemyBody.velocity.y < -0.15f)
         {
-            Vector3 temp = transform.localScale;
-            if (temp.x == 1f)
-            {
-                temp.x = -1f;
-            }
-            else
-            {
-                temp.x = 1f;
-            }
-            transform.localScale = temp;
+
+            grounded = false;
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FALL);
+            Debug.Log("RedEnemy Fall with velocity: " +redEnemyBody.velocity.y);
+        }
+        else if (target.gameObject.tag=="Wall")
+        {
+            walled = false;
         }
     }
 
-    void Live()
+    void Damage(int dmg)
     {
-        if (!GetComponent<EnemyFreeze>().isFreeze)
-        {
-            enemy.timeAI += Time.deltaTime;
-            if (enemy.ground)
-            {
-                enemy.Move();
-                if (enemy.timeAI > .5f)
-                {
-                    anim.SetBool("Roll", false);
-                }
-
-                if (enemy.timeAI > 3f)
-                {
-                    enemy.sizeY = transform.position.y - playerTranform.position.y;
-                    if (enemy.sizeY < -1f && enemy.sizeJump.GetComponent<SizeJumpEnemy>().sizeJump)
-                    {
-                        enemy.timeAI = 0;
-                        enemy.Jump();
-                    }
-                    else if (enemy.sizeY > -1f && enemy.sizeY < 1f)
-                    {
-                        enemy.timeAI = 0;
-                        anim.SetBool("Roll", true);
-                    }
-                    else if (enemy.sizeY > 1f)
-                    {
-                        enemy.flyAI = true;
-                    }
-                }
-                else if (!enemy.flyAI)
-                {
-                    ChangeDirection();
-                }
-            }
-        }
+        Health = Mathf.Max(0, Health - dmg);
     }
+
+    void Animation_Freeze()
+    {
+        if (Health <= 25)
+        {
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE4);
+            gameObject.tag = "Freeze4";
+            gameObject.layer = 11;
+        }
+        else if (Health <= 45)
+        {
+            gameObject.layer = 9;
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE3);
+            gameObject.tag = "Freeze";
+        }
+        else if (Health <= 75)
+        {
+            gameObject.layer = 9;
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE2);
+            gameObject.tag = "Freeze";
+        }
+        else if (Health < 100)
+        {
+            gameObject.layer = 9;
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE1);
+            gameObject.tag = "Freeze";
+        }
+        /*else
+        {
+            gameObject.tag = "Enemy";
+            gameObject.layer = 9;
+            if (redEnemyAnimator.GetInteger("RedEnemyCurrentState") == STATE_FREEZE1)
+                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_IDLE);
+        }*/
+
+    }
+
+
+
+
+
 }

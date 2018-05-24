@@ -37,12 +37,14 @@ public class EnemyFreeze : MonoBehaviour {
                     timeFreeze = 0f;
                     lvFreeze -= damage * 3;
                     AnimationFreeze(lvFreeze);
+                    gameObject.layer = 9;
                 }
                 else
                 {
                     isFreeze = false;
                     anim.SetBool("Freeze1", false);
                     gameObject.tag = "Enemy";
+                    gameObject.layer = 9;
                 }
             }
         }
@@ -94,6 +96,7 @@ public class EnemyFreeze : MonoBehaviour {
         {
             anim.SetBool("Freeze4", true);
             gameObject.tag = "Freeze4";
+            gameObject.layer =  11;
             myBody.sharedMaterial = material;
             myBody.freezeRotation = false;
         }

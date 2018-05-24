@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212991602565706678}
   - component: {fileID: 114528501806280636}
   - component: {fileID: 50395484785417122}
-  - component: {fileID: 68179064643517460}
+  - component: {fileID: 61110164395519092}
   m_Layer: 0
   m_Name: bullet1
   m_TagString: Untagged
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!68 &68179064643517460
-EdgeCollider2D:
+--- !u!61 &61110164395519092
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,32 +75,19 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0015412569, y: 0.18333334}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.23333333, y: 0.36666667}
+    newSize: {x: 0.23333333, y: 0.36666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.20559144, y: 0.36666667}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.11308932, y: 0.0038229227}
-  - {x: 0.022522688, y: 0.0035511255}
-  - {x: 0.027676582, y: 0.02079004}
-  - {x: 0.06140566, y: 0.050690234}
-  - {x: 0.094264746, y: 0.08032155}
-  - {x: 0.09167361, y: 0.12183213}
-  - {x: 0.112080574, y: 0.13135976}
-  - {x: 0.11346865, y: 0.24118167}
-  - {x: 0.09352374, y: 0.24728227}
-  - {x: 0.086563826, y: 0.2928239}
-  - {x: 0.057659626, y: 0.31822333}
-  - {x: 0.028678894, y: 0.36544546}
-  - {x: -0.052165747, y: 0.36579284}
-  - {x: -0.062939405, y: 0.34379128}
-  - {x: -0.08812094, y: 0.33976847}
-  - {x: -0.090106726, y: 0.32080767}
-  - {x: -0.08890486, y: 0.22737032}
-  - {x: -0.057845116, y: 0.22031689}
-  - {x: -0.057868958, y: 0.15790063}
-  - {x: -0.06188059, y: 0.13683903}
-  - {x: -0.08810806, y: 0.07801932}
-  - {x: -0.118398905, y: 0.07058412}
-  - {x: -0.117034435, y: -0.00003284216}
 --- !u!114 &114528501806280636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  dmg: 10
+  dmg: 5
   forceX: 120
   forceY: 15
 --- !u!212 &212991602565706678
