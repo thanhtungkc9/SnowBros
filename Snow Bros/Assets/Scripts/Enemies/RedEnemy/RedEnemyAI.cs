@@ -55,6 +55,11 @@ public class RedEnemyAI : MonoBehaviour {
             time -= 1.0f;
         }
         if (Health<99) Animation_Freeze();
+        else
+        {
+            gameObject.tag = "Enemy";
+            gameObject.layer = 9;
+        }
     }
     void OnCollisionEnter2D(Collision2D target)
     {
@@ -105,19 +110,19 @@ public class RedEnemyAI : MonoBehaviour {
         }
         else if (Health <= 45)
         {
-            gameObject.layer = 9;
+            gameObject.layer = 12;
             redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE3);
             gameObject.tag = "Freeze";
         }
         else if (Health <= 75)
         {
-            gameObject.layer = 9;
+            gameObject.layer = 12;
             redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE2);
             gameObject.tag = "Freeze";
         }
         else if (Health < 100)
         {
-            gameObject.layer = 9;
+            gameObject.layer = 12;
             redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE1);
             gameObject.tag = "Freeze";
         }

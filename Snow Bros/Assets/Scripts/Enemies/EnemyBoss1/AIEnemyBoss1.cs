@@ -25,13 +25,14 @@ public class AIEnemyBoss1 : MonoBehaviour {
     public float moveForce = 150f;
     public float maxVelocity = 1.5f;
     public float time=0.0f;
+
     //Enemy Infomation
     public int Health=100;
 
     // Use this for initialization
     void Start()
     {
-        enemyBoss1Body.AddForce(new Vector2(-Random.Range(800.0f,1200.0f), Random.Range(400.0f,800.0f)));
+        enemyBoss1Body.AddForce(new Vector2(-Random.Range(500.0f,1000.0f), Random.Range(400.0f,800.0f)));
        
     }
     void Awake()
@@ -51,6 +52,11 @@ public class AIEnemyBoss1 : MonoBehaviour {
             time -= 1.0f;
         }
         if (Health<100) Animation_Freeze();
+        else
+        {
+            gameObject.tag = "Enemy";
+            gameObject.layer = 9;
+        }
     }
     void OnCollisionEnter2D(Collision2D target)
     {
@@ -60,7 +66,7 @@ public class AIEnemyBoss1 : MonoBehaviour {
             enemyBoss1Animator.SetInteger("EnemyBoss1CurrentState", STATE_LAND);         
             grounded = true;
         }
-        else
+        
             if (target.gameObject.tag == "Wall"&&walled==false)
         {
             walled = true;
@@ -102,19 +108,19 @@ public class AIEnemyBoss1 : MonoBehaviour {
         }
         else if (Health <= 45)
         {
-            gameObject.layer = 9;
+            gameObject.layer = 12;
             enemyBoss1Animator.SetInteger("EnemyBoss1CurrentState", STATE_FREEZE3);
             gameObject.tag = "Freeze";
         }
         else if (Health <= 75)
         {
-            gameObject.layer = 9;
+            gameObject.layer = 12;
             enemyBoss1Animator.SetInteger("EnemyBoss1CurrentState", STATE_FREEZE2);
             gameObject.tag = "Freeze";
         }
         else if (Health <100)
         {
-            gameObject.layer = 9;
+            gameObject.layer = 12;
             enemyBoss1Animator.SetInteger("EnemyBoss1CurrentState", STATE_FREEZE1);
             gameObject.tag = "Freeze";
         }

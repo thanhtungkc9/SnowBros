@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114276595069092548}
   m_Layer: 9
   m_Name: BulletFire
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,8 +120,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1572147551
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300058, guid: 28dd4f299ae916745ac37c96d3795813, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

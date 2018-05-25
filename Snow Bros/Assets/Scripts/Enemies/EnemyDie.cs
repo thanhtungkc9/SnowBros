@@ -8,6 +8,7 @@ public class EnemyDie : MonoBehaviour {
     private CircleCollider2D cirCollider;
     private Rigidbody2D myBody;
     private Animator anim;
+    private Camera camera;
 
     private void Awake()
     {
@@ -15,7 +16,9 @@ public class EnemyDie : MonoBehaviour {
         myBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         cirCollider = GetComponent<CircleCollider2D>();
-    }
+        
+        
+            }
 
     // Use this for initialization
     void Start () {

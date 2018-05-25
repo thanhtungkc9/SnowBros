@@ -18,7 +18,7 @@ public class Boss1AttackBehaviour : StateMachineBehaviour {
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         Vector2 position = animator.GetComponent<AI_Boss1>().boss1Body.position;
         position.y += 5;
-        position.x -= 5 ;
+        position.x -= 2 ;
         Instantiate(animator.GetComponent<AI_Boss1>().enemyBoss1, position, Quaternion.identity);
         
     }

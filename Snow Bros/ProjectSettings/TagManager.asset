@@ -27,8 +27,8 @@ TagManager:
   - Enemy
   - Boss
   - EnemyFreeze4
-  - 
-  - 
+  - EnemyFreeze
+  - Player
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Grounds
     uniqueID: 2930540539
+    locked: 0
+  - name: Enemy
+    uniqueID: 3217275467
     locked: 0
   - name: Player
     uniqueID: 1572147551

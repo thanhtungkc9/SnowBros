@@ -84,16 +84,29 @@ public class PlayerScript : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D target)
     {
 
-        if (target.gameObject.tag == "Freeze4" && playerAnimator.GetInteger("CurrentState") != STATE_PUSH && playerBody.velocity.x!=0)
+        if (target.gameObject.tag == "Freeze4"  && playerBody.velocity.x!=0)
         {
-            playerAnimator.SetInteger("CurrentState", STATE_PUSH);
+            Debug.Log("Collision SnowBall");
+          //  if (playerAnimator.GetInteger("CurrentState") != STATE_PUSH)
+           //     playerAnimator.SetInteger("CurrentState", STATE_PUSH);
+          //  else
+            {
+                Debug.Log("Add force");
+                if (transform.localScale.x == 1f)
+                {
+                    target.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(500.0f, 0), transform.position);
+                }
+                else if (transform.localScale.x == -1f)
+                {
+                    target.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(-500.0f, 0), transform.position);
+                }
+            }
         }
-        Debug.Log(playerBody.velocity.y);
+      //  Debug.Log(playerBody.velocity.y);
         if ((target.gameObject.tag == "Ground" || target.gameObject.tag == "Freeze4")&&playerBody.velocity.y < 0.1f)
         {
             grounded = true;
             float h = Input.GetAxisRaw("Horizontal");
-            Debug.Log("+  " + h);
              if (h != 0)
             {
                 playerAnimator.SetInteger("CurrentState", STATE_WALK);
@@ -105,11 +118,15 @@ public class PlayerScript : MonoBehaviour {
 
             }
         }
+        if (target.gameObject.tag=="Enemy")
+        {
+            //playerAnimator.SetInteger("CurrentState", STATE_DIE);
+        }
     }
 
     void OnCollisionExit2D(Collision2D target)
     {
-        if ((target.gameObject.tag=="Ground" || target.gameObject.tag == "Freeze4") )
+        if ((target.gameObject.tag=="Ground" || target.gameObject.tag == "Freeze4") && playerBody.velocity.y < -0.2f)
         {
             grounded = false;
         }

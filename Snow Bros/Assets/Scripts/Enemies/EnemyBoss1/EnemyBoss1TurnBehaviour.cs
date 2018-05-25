@@ -10,6 +10,7 @@ public class EnemyBoss1TurnBehaviour : StateMachineBehaviour {
         Vector3 scale = animator.GetComponent<AIEnemyBoss1>().transform.localScale;
         scale.x = -scale.x;
         animator.GetComponent<AIEnemyBoss1>().transform.localScale = scale;
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
