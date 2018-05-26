@@ -27,10 +27,9 @@ public class PlayerScript : MonoBehaviour {
     private GameObject bullet2;
 
     public float jumpForce = 1700f;
-    public float moveXVelocity = 100f;
     public float moveForce = 150f;
     public float maxVelocity = 3f;
-    public bool grounded=false, bullet = false, keyupJ = true, keyupK = true;
+    public bool grounded = false, bullet = false;
     void Awake()
     {
         playerBody = GetComponent<Rigidbody2D>();
@@ -39,52 +38,17 @@ public class PlayerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        shootPoint = transform.Find("ShootPoint");
     }
     // Update is called once per frame
-    void Update() {
-        Keyboard_Move();       
+    void FixedUpdate() {
+        Keyboard_Move();   
        
     }
-
-    void Keyboard()
-    {
-        float h = Input.GetAxisRaw("Horizontal");
-        if (h > 0)
-        {
-            Vector3 scale = transform.localScale;
-            scale.x = 1f;
-            transform.localScale = scale;
-        }
-        else if (h < 0)
-        {
-            Vector3 scale = transform.localScale;
-            scale.x = -1f;
-            transform.localScale = scale;
-        }
-        else
-        {
-            playerAnimator.SetBool("Walk", false);
-        }
-        if (Input.GetKey(KeyCode.J))
-        {
-            if (playerAnimator.GetBool("Jump") || !playerAnimator.GetBool("Walk"))
-                playerAnimator.SetBool("Throw", true);
-            else if (playerAnimator.GetBool("Walk"))
-                playerAnimator.SetBool("RunThrow", true);
-        }
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-
-            playerAnimator.SetBool("RunThrow", false);
-            playerAnimator.SetBool("Throw", false);
-        }
-    } //cái này k xài
 
     void OnCollisionEnter2D(Collision2D target)
     {
 
-        if (target.gameObject.tag == "Freeze4"  && playerBody.velocity.x!=0)
+        if (target.gameObject.tag == "Freeze4"  && playerBody.velocity.x != 0)
         {
             Debug.Log("Collision SnowBall");
           //  if (playerAnimator.GetInteger("CurrentState") != STATE_PUSH)
@@ -92,18 +56,19 @@ public class PlayerScript : MonoBehaviour {
           //  else
             {
                 Debug.Log("Add force");
-                if (transform.localScale.x == 1f)
-                {
-                    target.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(500.0f, 0), transform.position);
-                }
-                else if (transform.localScale.x == -1f)
-                {
-                    target.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(-500.0f, 0), transform.position);
-                }
+                target.collider.SendMessageUpwards("PlayerKicked", transform.localScale.x);
+                //if (transform.localScale.x == 1f)
+                //{
+                //    target.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(1000.0f, 0), Vector2.zero);
+                //}
+                //else if (transform.localScale.x == -1f)
+                //{
+                //    target.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(-1000.0f, 0), Vector2.zero);
+                //}
             }
         }
       //  Debug.Log(playerBody.velocity.y);
-        if ((target.gameObject.tag == "Ground" || target.gameObject.tag == "Freeze4")&&playerBody.velocity.y < 0.1f)
+        if ((target.gameObject.tag == "Ground" || target.gameObject.tag == "Freeze4") && playerBody.velocity.y < 0.1f)
         {
             grounded = true;
             float h = Input.GetAxisRaw("Horizontal");
