@@ -10,6 +10,7 @@ public class RedEnemyTurnBehaviour : StateMachineBehaviour {
         Vector3 scale = animator.GetComponent<RedEnemyAI>().transform.localScale;
         scale.x = -scale.x;
         animator.GetComponent<RedEnemyAI>().transform.localScale = scale;
+        animator.GetComponent<RedEnemyAI>().redEnemyBody.velocity = new Vector2(0, 0);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

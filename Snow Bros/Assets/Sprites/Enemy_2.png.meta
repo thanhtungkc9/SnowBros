@@ -2,48 +2,48 @@ fileFormatVersion: 2
 guid: 52c2f795615e48846bcbc2e1250c56c8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Enemy_2_0
-    21300002: Enemy_2_1
-    21300004: Enemy_2_2
+    21300000: YellowEnemy_Fall1
+    21300002: YellowEnemy_Fall2
+    21300004: 1
     21300006: Enemy_2_3
     21300008: Enemy_2_4
     21300010: Enemy_2_5
-    21300012: Enemy_2_6
-    21300014: Enemy_2_7
-    21300016: Enemy_2_8
-    21300018: Enemy_2_9
-    21300020: Enemy_2_10
-    21300022: Enemy_2_11
-    21300024: Enemy_2_12
-    21300026: Enemy_2_13
-    21300028: Enemy_2_14
-    21300030: Enemy_2_15
-    21300032: Enemy_2_16
-    21300034: Enemy_2_17
-    21300036: Enemy_2_18
-    21300038: Enemy_2_19
-    21300040: Enemy_2_20
-    21300042: Enemy_2_21
+    21300012: YellowEnemy_Walk1
+    21300014: YellowEnemy_Walk2
+    21300016: YellowEnemy_Walk3
+    21300018: YellowEnemy_Walk4
+    21300020: YellowEnemy_Turn1
+    21300022: YellowEnemy_Turn2
+    21300024: YellowEnemy_Turn3
+    21300026: YellowEnemy_Jump1
+    21300028: YellowEnemy_Jump2
+    21300030: YellowEnemy_Die1
+    21300032: YellowEnemy_Die12
+    21300034: YellowEnemy_Die13
+    21300036: YellowEnemy_Die14
+    21300038: YellowEnemy_Die15
+    21300040: YellowEnemy_Die16
+    21300042: YellowEnemy_Die17
     21300044: Enemy_2_22
     21300046: Enemy_2_23
-    21300048: Enemy_2_24
-    21300050: Enemy_2_25
-    21300052: Enemy_2_26
-    21300054: Enemy_2_27
-    21300056: Enemy_2_28
-    21300058: Enemy_2_29
-    21300060: Enemy_2_30
-    21300062: Enemy_2_31
-    21300064: Enemy_2_32
-    21300066: Enemy_2_33
-    21300068: Enemy_2_34
-    21300070: Enemy_2_35
-    21300072: Enemy_2_36
-    21300074: Enemy_2_37
-    21300076: Enemy_2_38
+    21300048: YellowEnemy_Die21
+    21300050: YellowEnemy_Die22
+    21300052: YellowEnemy_Die23
+    21300054: YellowEnemy_WakeUp1
+    21300056: YellowEnemy_WakeUp2
+    21300058: YellowEnemy_WakeUp3
+    21300060: YellowEnemy_Freeze11
+    21300062: YellowEnemy_Freeze12
+    21300064: YellowEnemy_Freeze13
+    21300066: YellowEnemy_Freeze21
+    21300068: YellowEnemy_Freeze22
+    21300070: YellowEnemy_Freeze23
+    21300072: YellowEnemy_Freeze31
+    21300074: YellowEnemy_Freeze32
+    21300076: YellowEnemy_Freeze33
     21300078: Enemy_2_39
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 6
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -61,6 +61,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -71,7 +73,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -133,7 +135,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_2_0
+      name: YellowEnemy_Fall1
       rect:
         serializedVersion: 2
         x: 14
@@ -153,7 +155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_1
+      name: YellowEnemy_Fall2
       rect:
         serializedVersion: 2
         x: 65
@@ -173,7 +175,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_2
+      name: 1
       rect:
         serializedVersion: 2
         x: 107
@@ -253,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_6
+      name: YellowEnemy_Walk1
       rect:
         serializedVersion: 2
         x: 17
@@ -273,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_7
+      name: YellowEnemy_Walk2
       rect:
         serializedVersion: 2
         x: 78
@@ -293,7 +295,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_8
+      name: YellowEnemy_Walk3
       rect:
         serializedVersion: 2
         x: 140
@@ -313,7 +315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_9
+      name: YellowEnemy_Walk4
       rect:
         serializedVersion: 2
         x: 206
@@ -333,7 +335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_10
+      name: YellowEnemy_Turn1
       rect:
         serializedVersion: 2
         x: 254
@@ -342,7 +344,7 @@ TextureImporter:
         height: 36
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 5, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -353,7 +355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_11
+      name: YellowEnemy_Turn2
       rect:
         serializedVersion: 2
         x: 310
@@ -373,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_12
+      name: YellowEnemy_Turn3
       rect:
         serializedVersion: 2
         x: 366
@@ -393,7 +395,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_13
+      name: YellowEnemy_Jump1
       rect:
         serializedVersion: 2
         x: 14
@@ -413,7 +415,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_14
+      name: YellowEnemy_Jump2
       rect:
         serializedVersion: 2
         x: 64
@@ -433,7 +435,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_15
+      name: YellowEnemy_Die1
       rect:
         serializedVersion: 2
         x: 16
@@ -453,7 +455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_16
+      name: YellowEnemy_Die12
       rect:
         serializedVersion: 2
         x: 74
@@ -473,7 +475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_17
+      name: YellowEnemy_Die13
       rect:
         serializedVersion: 2
         x: 128
@@ -493,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_18
+      name: YellowEnemy_Die14
       rect:
         serializedVersion: 2
         x: 206
@@ -513,7 +515,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_19
+      name: YellowEnemy_Die15
       rect:
         serializedVersion: 2
         x: 279
@@ -533,7 +535,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_20
+      name: YellowEnemy_Die16
       rect:
         serializedVersion: 2
         x: 352
@@ -553,7 +555,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_21
+      name: YellowEnemy_Die17
       rect:
         serializedVersion: 2
         x: 420
@@ -613,7 +615,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_24
+      name: YellowEnemy_Die21
       rect:
         serializedVersion: 2
         x: 15
@@ -633,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_25
+      name: YellowEnemy_Die22
       rect:
         serializedVersion: 2
         x: 70
@@ -653,7 +655,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_26
+      name: YellowEnemy_Die23
       rect:
         serializedVersion: 2
         x: 127
@@ -673,7 +675,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_27
+      name: YellowEnemy_WakeUp1
       rect:
         serializedVersion: 2
         x: 22
@@ -693,7 +695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_28
+      name: YellowEnemy_WakeUp2
       rect:
         serializedVersion: 2
         x: 73
@@ -713,7 +715,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_29
+      name: YellowEnemy_WakeUp3
       rect:
         serializedVersion: 2
         x: 130
@@ -733,7 +735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_30
+      name: YellowEnemy_Freeze11
       rect:
         serializedVersion: 2
         x: 11
@@ -753,7 +755,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_31
+      name: YellowEnemy_Freeze12
       rect:
         serializedVersion: 2
         x: 66
@@ -773,10 +775,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_32
+      name: YellowEnemy_Freeze13
       rect:
         serializedVersion: 2
-        x: 126
+        x: 127
         y: 184
         width: 42
         height: 32
@@ -793,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_33
+      name: YellowEnemy_Freeze21
       rect:
         serializedVersion: 2
         x: 17
@@ -813,7 +815,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_34
+      name: YellowEnemy_Freeze22
       rect:
         serializedVersion: 2
         x: 73
@@ -833,11 +835,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_35
+      name: YellowEnemy_Freeze23
       rect:
         serializedVersion: 2
         x: 131
-        y: 144
+        y: 143
         width: 45
         height: 32
       alignment: 7
@@ -853,7 +855,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_36
+      name: YellowEnemy_Freeze31
       rect:
         serializedVersion: 2
         x: 17
@@ -873,7 +875,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_37
+      name: YellowEnemy_Freeze32
       rect:
         serializedVersion: 2
         x: 71
@@ -893,7 +895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2_38
+      name: YellowEnemy_Freeze33
       rect:
         serializedVersion: 2
         x: 134

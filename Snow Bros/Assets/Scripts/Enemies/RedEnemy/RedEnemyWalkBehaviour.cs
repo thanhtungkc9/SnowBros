@@ -8,7 +8,41 @@ public class RedEnemyWalkBehaviour : StateMachineBehaviour
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-       
+        animator.SetInteger("RedEnemyCurrentState", animator.GetComponent<RedEnemyAI>().STATE_WALK);
+        if (animator.GetComponent<RedEnemyAI>().transform.localScale.x > 0)
+        {
+            float forceX = 0f;
+
+            if (animator.GetComponent<RedEnemyAI>().redEnemyBody.velocity.x < animator.GetComponent<RedEnemyAI>().maxVelocity)
+            {
+                if (animator.GetComponent<RedEnemyAI>().grounded)
+                {
+                    forceX = animator.GetComponent<RedEnemyAI>().moveForce;
+                }
+                else
+                {
+                    forceX = animator.GetComponent<RedEnemyAI>().moveForce * 0.5f;
+                }
+            }
+            animator.GetComponent<RedEnemyAI>().redEnemyBody.AddForce(new Vector2(forceX, 0));
+        }
+        else
+        {
+            float forceX = 0f;
+
+            if (animator.GetComponent<RedEnemyAI>().redEnemyBody.velocity.x > -animator.GetComponent<RedEnemyAI>().maxVelocity)
+            {
+                if (animator.GetComponent<RedEnemyAI>().grounded)
+                {
+                    forceX = -animator.GetComponent<RedEnemyAI>().moveForce;
+                }
+                else
+                {
+                    forceX = -animator.GetComponent<RedEnemyAI>().moveForce * 0.5f;
+                }
+            }
+            animator.GetComponent<RedEnemyAI>().redEnemyBody.AddForce(new Vector2(forceX, 0));
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -10,9 +10,13 @@ public class RedEnemyAI : MonoBehaviour {
     private Transform playerTranform;
     public PhysicsMaterial2D bounce;
 
+    public float walkingDistance = 10.0f;
+    public bool isJumpPosition = false;
+
     public bool grounded = false;
     public bool walled = false;
     private bool playerkicked = false; //nếu bị player đá thì sẽ k còn tan băng
+    public float jumpForce = 1400f;
 
     public int STATE_FALL = -2;
     public int STATE_LAND = -1;
@@ -32,7 +36,7 @@ public class RedEnemyAI : MonoBehaviour {
     public float maxVelocity = 1.5f;
     public float time = 0.0f;
    
-    //Enemy Infomation
+    //Enemy Information
     public int Health = 100;
 
     private void Awake()
@@ -46,7 +50,6 @@ public class RedEnemyAI : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -58,47 +61,99 @@ public class RedEnemyAI : MonoBehaviour {
             Health = Mathf.Min(100, Health + 4);
             time -= 1.0f;
         }
-        if (Health<99) Animation_Freeze();
+        if (Health < 99) Animation_Freeze();
         else
         {
-            gameObject.tag = "Enemy";
-            gameObject.layer = 9;
+            if (gameObject.layer != 14)
+            {
+                gameObject.tag = "Enemy";
+                gameObject.layer = 9;
+            }
         }
+
+
+       // transform.LookAt(target);
+       if (redEnemyAnimator.GetInteger("RedEnemyCurrentState")==STATE_WALK 
+            && (
+            (redEnemyBody.position.x< playerTranform.position.x && transform.localScale.x<0)
+            ||(redEnemyBody.position.x > playerTranform.position.x && transform.localScale.x > 0)
+            )
+            )
+        {
+            if (Mathf.Abs(redEnemyBody.position.y - playerTranform.position.y) < 1.0f)
+                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_TURN);
+             
+        }
+        if (isJumpPosition==true && (redEnemyAnimator.GetInteger("RedEnemyCurrentState")==STATE_WALK)
+            &&playerTranform.position.y>transform.position.y+0.5f)
+        {
+            
+            redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_JUMP);
+            isJumpPosition = false;
+            Debug.Log("Jump");
+           
+        }
+
     }
     void OnCollisionEnter2D(Collision2D target)
     {
-        if (gameObject.tag == "Freeze4")
+        if (target.gameObject.tag == "JumpPosition")
+            isJumpPosition = true;
+        if (gameObject.layer == 14)
         {
-            //xử lý sau khi freeze4 rớt nhanh xuống thì set lại như cũ
-            if(target.gameObject.tag == "Ground")
+            Debug.Log(redEnemyBody.velocity.y);
+            if (
+                ///redEnemyAnimator.GetInteger("RedEnemyCurrentState") == STATE_DIE1
+              
+                target.gameObject.tag == "Ground")
             {
-                redEnemyBody.velocity = new Vector2(redEnemyBody.velocity.x, 0);
-                redEnemyBody.gravityScale = 1;
-            }
-            else if(target.gameObject.tag == "Wall")
-            {
-                redEnemyBody.velocity = Vector2.zero;
-                Destroy(gameObject, .5f);
+                //if (transform.position.y>target.transform.position.y)
+                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_DIE2);
+                
             }
         }
-        else if(gameObject.tag == "Enemy")
+        else
         {
-            if ((target.gameObject.tag == "Ground") && redEnemyBody.velocity.y < 0.1f)
+            if (target.gameObject.tag=="Freeze4")
             {
-                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_IDLE);
-                grounded = true;
+               
+                gameObject.layer = 14;
+                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_DIE1);
+                redEnemyBody.AddForce(new Vector2(Random.Range(-50.0f, 50.0f), Random.Range(400.0f, 600.0f)));
             }
             else
-                if (target.gameObject.tag == "Wall" && walled == false)
             {
-                walled = true;
-                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_TURN);
-            }
-            if (target.gameObject.tag == "Freeze4")
-            {
-                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_DIE1);
+                if (gameObject.tag == "Freeze4")
+                {
+                    //xử lý sau khi freeze4 rớt nhanh xuống thì set lại như cũ
+                    if (target.gameObject.tag == "Ground")
+                    {
+                        redEnemyBody.velocity = new Vector2(redEnemyBody.velocity.x, 0);
+                        redEnemyBody.gravityScale = 1;
+                    }
+                    else if (target.gameObject.tag == "Wall")
+                    {
+                        redEnemyBody.velocity = Vector2.zero;
+                        Destroy(gameObject, .5f);
+                    }
+                }
+                else if (gameObject.tag == "Enemy")
+                {
+                    if ((target.gameObject.tag == "Ground") )
+                    {
+                        redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_IDLE);
+                        grounded = true;
+                    }
+                    else
+                        if (target.gameObject.tag == "Wall" && walled == false)
+                    {
+                        walled = true;
+                        redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_TURN);
+                    }
+                }
             }
         }
+        
     }
 
     private void OnCollisionStay2D(Collision2D target)
@@ -111,7 +166,9 @@ public class RedEnemyAI : MonoBehaviour {
 
     private void OnCollisionExit2D(Collision2D target)
     {
-        if ((target.gameObject.tag == "Ground")&& redEnemyBody.velocity.y < -0.15f)
+        if (target.gameObject.tag == "JumpPosition")
+            isJumpPosition = false;
+        if ((target.gameObject.tag == "Ground")&& redEnemyBody.velocity.y < -0.0f)
         {
             //xử lý freeze4 rớt nhanh xuống
             if(gameObject.tag == "Freeze4")
@@ -121,7 +178,7 @@ public class RedEnemyAI : MonoBehaviour {
             else if (gameObject.tag == "Enemy")
             {
                 grounded = false;
-                redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FALL);
+                if (gameObject.layer!=14) redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FALL);
                 //Debug.Log("RedEnemy Fall with velocity: " + redEnemyBody.velocity.y);
             }            
         }
@@ -141,11 +198,13 @@ public class RedEnemyAI : MonoBehaviour {
 
     void Damage(int dmg)
     {
+        if (gameObject.layer!=14)
         Health = Mathf.Max(0, Health - dmg);
     }
 
     void Animation_Freeze()
-    {
+    { 
+        if (gameObject.layer==14) return;
         if (Health <= 25)
         {
             redEnemyAnimator.SetInteger("RedEnemyCurrentState", STATE_FREEZE4);

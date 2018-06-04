@@ -14,6 +14,7 @@ TagManager:
   - SizeJump
   - Wall
   - Boss
+  - JumpPosition
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - EnemyFreeze4
   - EnemyFreeze
   - Player
-  - Test
+  - Destroyed
   - 
   - 
   - 

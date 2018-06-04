@@ -94,9 +94,11 @@ public class Bullet : MonoBehaviour {
             || collision.gameObject.tag == "Freeze4")
         {
 
-            Debug.Log("Bullet with " +collision.gameObject.tag);
-            collision.SendMessageUpwards("Damage", dmg);
-            Destroy(gameObject);
+            if (collision.gameObject.layer != 14)
+            {
+                collision.SendMessageUpwards("Damage", dmg);
+                Destroy(gameObject);
+            }
         }
     }
 }
