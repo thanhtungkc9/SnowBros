@@ -82,6 +82,12 @@
     <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyWalkBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\SizeJumpEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyDie2Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyFallBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyFreeze1Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyJumpBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyTurnBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyWalkBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerIdleBehaviour.cs" />
