@@ -34,25 +34,36 @@ public class BulletFire : MonoBehaviour {
 
     IEnumerator FLy()
     {
-        if (direction)
+        if (transform.rotation.z <0)
         {
-            Vector3 scale = transform.localScale;
-            scale.x = 1f;
-            transform.localScale = scale;
+
             Vector2 newPos1 = transform.position;
-            newPos1 = new Vector2(newPos1.x + speed * Time.deltaTime, newPos1.y);
+            newPos1 = new Vector2(newPos1.x,newPos1.y - speed * Time.deltaTime );
             transform.position = newPos1;
+
         }
         else
         {
-            Vector3 scale = transform.localScale;
-            scale.x = -1f;
-            transform.localScale = scale;
-            Vector2 newPos2 = transform.position;
-            newPos2 = new Vector2(newPos2.x - speed * Time.deltaTime, newPos2.y);
-            transform.position = newPos2;
+            if (direction)
+            {
+                Vector3 scale = transform.localScale;
+                scale.x = 1f;
+                transform.localScale = scale;
+                Vector2 newPos1 = transform.position;
+                newPos1 = new Vector2(newPos1.x + speed * Time.deltaTime, newPos1.y);
+                transform.position = newPos1;
+            }
+            else
+            {
+                Vector3 scale = transform.localScale;
+                scale.x = -1f;
+                transform.localScale = scale;
+                Vector2 newPos2 = transform.position;
+                newPos2 = new Vector2(newPos2.x - speed * Time.deltaTime, newPos2.y);
+                transform.position = newPos2;
+            }
+            yield return new WaitForSeconds(.1f);
         }
-        yield return new WaitForSeconds(.1f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

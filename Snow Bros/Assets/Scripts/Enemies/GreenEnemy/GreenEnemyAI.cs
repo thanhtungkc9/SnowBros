@@ -33,6 +33,7 @@ public class GreenEnemyAI : MonoBehaviour
     public int STATE_DIE2 = 9;
     public int STATE_WAKEUP = 7;
     public int STATE_JUMP = 10;
+    public int STATE_ATTACK2 = 12;
     public float moveXVelocity = 100f;
     public float moveForce = 150f;
     public float maxVelocity = 1.5f;
@@ -41,7 +42,9 @@ public class GreenEnemyAI : MonoBehaviour
     [SerializeField]
     private GameObject bulletFire;
     [SerializeField]
-    private Transform shootPoint;
+    private Transform shootPointHorizontal,shootPointVertical;
+    [SerializeField]
+    private Transform startPoint, endPoint;
     //Enemy Information
     public int Health = 100;
     public bool isShoot = false;
@@ -57,6 +60,8 @@ public class GreenEnemyAI : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        startX = startPoint.position.x;
+        endX = endPoint.position.x;
     }
 
     // Update is called once per frame
@@ -237,7 +242,7 @@ public class GreenEnemyAI : MonoBehaviour
     {
       //  if (transform.localScale.x > 0)
         {
-            GameObject newObject =Instantiate(bulletFire, shootPoint.position, Quaternion.identity);
+            GameObject newObject =Instantiate(bulletFire, shootPointHorizontal.position, Quaternion.identity);
             if (transform.localScale.x < 0)
                 newObject.transform.localScale = new Vector2(-1, newObject.transform.localScale.y);
         }
@@ -245,6 +250,16 @@ public class GreenEnemyAI : MonoBehaviour
         yield return new WaitForSeconds(.5f);
     }
 
+    public IEnumerator Attack2()
+    {
+        //  if (transform.localScale.x > 0)
+        {
+            GameObject newObject = Instantiate(bulletFire, shootPointVertical.position, Quaternion.identity);
+            // if (transform.localScale.x < 0)
+            newObject.transform.Rotate(0, 0, -90);
+        }
 
+        yield return new WaitForSeconds(.5f);
+    }
 
 }

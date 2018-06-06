@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Boss\Boss1\Boss1AttackBehaviour.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss1\Boss1IdleBehaviour.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss1\Boss1JumpBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CameraControllerScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyBoss1\AIEnemyBoss1.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyBoss1\EnemyBoss1FallBehaviour.cs" />
@@ -74,12 +75,14 @@
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\BulletFire.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyAttack1Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyAttack2Behaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyDie2Behaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyFallBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyFreeze1Behaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyJumpBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyTurnBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyWalkBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenVerticalEnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyDie2Behaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyFallBehaviour.cs" />

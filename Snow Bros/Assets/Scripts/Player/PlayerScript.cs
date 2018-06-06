@@ -85,7 +85,8 @@ public class PlayerScript : MonoBehaviour {
         }
         if (target.gameObject.tag=="Enemy")
         {
-            //playerAnimator.SetInteger("CurrentState", STATE_DIE);
+            gameObject.layer = 14;
+            playerAnimator.SetInteger("CurrentState", STATE_DIE);
         }
     }
 
