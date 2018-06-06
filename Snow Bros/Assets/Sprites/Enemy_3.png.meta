@@ -2,57 +2,57 @@ fileFormatVersion: 2
 guid: 28dd4f299ae916745ac37c96d3795813
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Enemy_3_0
+    21300000: GreenEnemy_Fall1
     21300002: Enemy_3_1
     21300004: Enemy_3_2
     21300006: Enemy_3_3
-    21300008: Enemy_3_4
-    21300010: Enemy_3_5
-    21300012: Enemy_3_6
-    21300014: Enemy_3_7
-    21300016: Enemy_3_8
-    21300018: Enemy_3_9
-    21300020: Enemy_3_10
-    21300022: Enemy_3_11
-    21300024: Enemy_3_12
-    21300026: Enemy_3_13
-    21300028: Enemy_3_14
-    21300030: Enemy_3_15
-    21300032: Enemy_3_16
-    21300034: Enemy_3_17
-    21300036: Enemy_3_18
-    21300038: Enemy_3_19
-    21300040: Enemy_3_20
-    21300042: Enemy_3_21
-    21300044: Enemy_3_22
-    21300046: Enemy_3_23
-    21300048: Enemy_3_24
-    21300050: Enemy_3_25
-    21300052: Enemy_3_26
-    21300054: Enemy_3_27
-    21300056: Enemy_3_28
+    21300008: GreenEnemy_Walk1
+    21300010: GreenEnemy_Walk2
+    21300012: GreenEnemy_Walk3
+    21300014: GreenEnemy_Walk4
+    21300016: GreenEnemy_Turn1
+    21300018: GreenEnemy_Turn2
+    21300020: GreenEnemy_Jump1
+    21300022: GreenEnemy_Jump2
+    21300024: GreenEnemy_Die11
+    21300026: GreenEnemy_Die12
+    21300028: GreenEnemy_Die13
+    21300030: GreenEnemy_Die14
+    21300032: GreenEnemy_Die15
+    21300034: GreenEnemy_Die16
+    21300036: GreenEnemy_Die17
+    21300038: GreenEnemy_Die21
+    21300040: GreenEnemy_Die22
+    21300042: GreenEnemy_Die23
+    21300044: GreenEnemy_Attack11
+    21300046: GreenEnemy_Attack21
+    21300048: GreenEnemy_Attack22
+    21300050: GreenEnemy_WakeUp1
+    21300052: GreenEnemy_WakeUp2
+    21300054: GreenEnemy_WakeUp3
+    21300056: ..
     21300058: Enemy_3_29
     21300060: Enemy_3_30
     21300062: Enemy_3_31
     21300064: Enemy_3_32
-    21300066: Enemy_3_33
-    21300068: Enemy_3_34
-    21300070: Enemy_3_35
+    21300066: GreenEnemy_Freeze11
+    21300068: GreenEnemy_Freeze12
+    21300070: GreenEnemy_Freeze13
     21300072: Enemy_3_36
     21300074: Enemy_3_37
     21300076: Enemy_3_38
     21300078: Enemy_3_39
     21300080: Enemy_3_40
     21300082: Enemy_3_41
-    21300084: Enemy_3_42
-    21300086: Enemy_3_43
-    21300088: Enemy_3_44
-    21300090: Enemy_3_45
-    21300092: Enemy_3_46
-    21300094: Enemy_3_47
+    21300084: GreenEnemy_Freeze21
+    21300086: GreenEnemy_Freeze22
+    21300088: GreenEnemy_Freeze23
+    21300090: GreenEnemy_Freeze31
+    21300092: GreenEnemy_Freeze32
+    21300094: GreenEnemy_Freeze33
     21300096: Enemy_3_48
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 6
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -70,6 +70,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -80,7 +82,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -142,7 +144,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_3_0
+      name: GreenEnemy_Fall1
       rect:
         serializedVersion: 2
         x: 17
@@ -156,7 +158,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c881bb0d696285841af32f5b072d8c33
+      spriteID: 5f2b2182d9fef494fa62de9b996bbce6
       vertices: []
       indices: 
       edges: []
@@ -176,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec19bb37ef4f8534d910eb53d91ecafe
+      spriteID: a45c305fb6cb00f488afc86c5cd37b41
       vertices: []
       indices: 
       edges: []
@@ -196,7 +198,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27065b6592c579148938f11e6e981d3c
+      spriteID: ead954ccc038c614f9a80dab7ec15318
       vertices: []
       indices: 
       edges: []
@@ -216,13 +218,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5f1b94cca294454692a66ad76793c78
+      spriteID: 36806655ec268a248988c49b55230aef
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_4
+      name: GreenEnemy_Walk1
       rect:
         serializedVersion: 2
         x: 25
@@ -236,13 +238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03d9ce8ef5ce3ee4cae448e8d7c85d06
+      spriteID: 001eac7e388744e418e323a9f974c8cb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_5
+      name: GreenEnemy_Walk2
       rect:
         serializedVersion: 2
         x: 68
@@ -256,13 +258,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d167a6025b226984e91751eaef3ea500
+      spriteID: c2634a3d57a76b34b84e7eb252f746c9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_6
+      name: GreenEnemy_Walk3
       rect:
         serializedVersion: 2
         x: 111
@@ -276,13 +278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c29e0881d2c4c642a811e70d59484e9
+      spriteID: f881801ad7e957743bac51a83113085c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_7
+      name: GreenEnemy_Walk4
       rect:
         serializedVersion: 2
         x: 161
@@ -296,36 +298,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76282ebbc88a27744a7d1ca5edfb4e62
+      spriteID: 976e65489f827144484bed4785da0547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_8
+      name: GreenEnemy_Turn1
       rect:
         serializedVersion: 2
         x: 212
-        y: 407
+        y: 415
         width: 32
-        height: 43
+        height: 27
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 8, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf8905e5011a85c40be35d8918b01edd
+      spriteID: 8c6c54e3af5e2194da1744380e9cfa3a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_9
+      name: GreenEnemy_Turn2
       rect:
         serializedVersion: 2
-        x: 260
+        x: 273
         y: 417
         width: 41
         height: 26
@@ -336,13 +338,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86c9090dbf83eec4a843f8ec85d7e6ef
+      spriteID: 0327bf1b4e56e0a4cb2e093c244da181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_10
+      name: GreenEnemy_Jump1
       rect:
         serializedVersion: 2
         x: 19
@@ -356,13 +358,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fff5c1692ed325845832615e22408b9f
+      spriteID: 7b947c9e6f10327469cc8b224ce72558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_11
+      name: GreenEnemy_Jump2
       rect:
         serializedVersion: 2
         x: 72
@@ -376,13 +378,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94d446ac4688a0b41a6d6494496081c4
+      spriteID: 0d4a4646f49e59b419cd5dbfb747edcc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_12
+      name: GreenEnemy_Die11
       rect:
         serializedVersion: 2
         x: 8
@@ -396,13 +398,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 295c807ff7989b14aa5d3324bb6d952b
+      spriteID: fbff6ed65d90de74dafd0f9f0346c464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_13
+      name: GreenEnemy_Die12
       rect:
         serializedVersion: 2
         x: 66
@@ -416,13 +418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b3c0453d78b9e74e873ebb51e14d7aa
+      spriteID: 51db2f4d01650c446a600022bced31be
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_14
+      name: GreenEnemy_Die13
       rect:
         serializedVersion: 2
         x: 131
@@ -436,13 +438,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61b22f58ad933c34891100a202e855c4
+      spriteID: d95636d05232e8a47964ec7314f6ff1b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_15
+      name: GreenEnemy_Die14
       rect:
         serializedVersion: 2
         x: 202
@@ -456,13 +458,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b026792f09e654c8771bb0f68c9e0d
+      spriteID: 6f14f0d0a9c613741870917e52fc72b0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_16
+      name: GreenEnemy_Die15
       rect:
         serializedVersion: 2
         x: 272
@@ -476,13 +478,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cc905299a95e5b49822ece9cc3d47b4
+      spriteID: 309f2d0571e019947900ee4559d74036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_17
+      name: GreenEnemy_Die16
       rect:
         serializedVersion: 2
         x: 324
@@ -496,13 +498,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34fa2ec26f053414882d67277e45a67b
+      spriteID: 17a983d360f5b1e41bd8a8b92f417764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_18
+      name: GreenEnemy_Die17
       rect:
         serializedVersion: 2
         x: 385
@@ -516,13 +518,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 126fd349dcad27341b6ce0f46db75a2e
+      spriteID: 24b8c4e3735922947aa29e407ec5e8f7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_19
+      name: GreenEnemy_Die21
       rect:
         serializedVersion: 2
         x: 10
@@ -536,13 +538,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1082f2f0e03ed6145bc063d61ca8d120
+      spriteID: c8aa6471d37be424688f80113f1f801d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_20
+      name: GreenEnemy_Die22
       rect:
         serializedVersion: 2
         x: 72
@@ -556,13 +558,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f0b769a9f5204f479bc4fbb186743a8
+      spriteID: 54e641a95aed37548bf7dd115576a614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_21
+      name: GreenEnemy_Die23
       rect:
         serializedVersion: 2
         x: 125
@@ -576,13 +578,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d1202da0e694a64994ae00258542cbb
+      spriteID: 271d4a0c5999ff941875ce90db6f2a5d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_22
+      name: GreenEnemy_Attack11
       rect:
         serializedVersion: 2
         x: 226
@@ -596,13 +598,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbdf16aef1f309a418c058b3cf0980ec
+      spriteID: c70e2eaed775cd4458cbd9f6be893973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_23
+      name: GreenEnemy_Attack21
       rect:
         serializedVersion: 2
         x: 261
@@ -616,13 +618,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c41f4fd02e92a0408cc2330cecb102c
+      spriteID: 33c6e7cb91c5ff543aacf11e155e15d1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_24
+      name: GreenEnemy_Attack22
       rect:
         serializedVersion: 2
         x: 310
@@ -636,13 +638,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7208783a659e6347b2be7abccedc387
+      spriteID: e5a29e96955e867418fa7dbc62532c86
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_25
+      name: GreenEnemy_WakeUp1
       rect:
         serializedVersion: 2
         x: 6
@@ -656,13 +658,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28e77cb18d4c0d84bbec28b1895d0062
+      spriteID: 43ea541e499d570439937d99649d767b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_26
+      name: GreenEnemy_WakeUp2
       rect:
         serializedVersion: 2
         x: 50
@@ -676,13 +678,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 674cefd984012104db0e05fb75e3d080
+      spriteID: 5b7403f8da101c147963a64d13a5f98d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_27
+      name: GreenEnemy_WakeUp3
       rect:
         serializedVersion: 2
         x: 94
@@ -696,13 +698,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b4c30dcc14bf0b49ae70772b4666142
+      spriteID: 801dc7ba766b57944ad3bf530c6b62f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_28
+      name: ..
       rect:
         serializedVersion: 2
         x: 141
@@ -716,7 +718,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b20163dbdcc33d0479252586b5c0d94f
+      spriteID: f3182b28d80b3d549b37bc3b9b1e4099
       vertices: []
       indices: 
       edges: []
@@ -736,7 +738,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f6de6c4d693c8546bc3c219e2e1ed2e
+      spriteID: fa1f78e0ef2fe754f977b731c5269153
       vertices: []
       indices: 
       edges: []
@@ -756,7 +758,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fea8e33b7c7fa3e4daeda714bb6a48ce
+      spriteID: 5e3216472078fb04f9e3889b3ade8d68
       vertices: []
       indices: 
       edges: []
@@ -776,7 +778,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03fdb06102931a34a84b80fe7e41cf58
+      spriteID: 75d39aca710660a44a503b9493378718
       vertices: []
       indices: 
       edges: []
@@ -796,13 +798,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d516bfb925e27d6408f4d3efad0e2e1e
+      spriteID: e36436d0af4a2694683e675137759cc4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_33
+      name: GreenEnemy_Freeze11
       rect:
         serializedVersion: 2
         x: 10
@@ -816,13 +818,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f42ef9ef3d62f3428637ba904431119
+      spriteID: b99ae286566bffa498dec4b231acb575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_34
+      name: GreenEnemy_Freeze12
       rect:
         serializedVersion: 2
         x: 66
@@ -836,13 +838,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3aff79a790853fa41943d8763d51ca11
+      spriteID: 6b9bdb32db6d3fb4da3113a21a8d3a69
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_35
+      name: GreenEnemy_Freeze13
       rect:
         serializedVersion: 2
         x: 126
@@ -856,7 +858,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18e34dc2790ec6e4687d046e93e2a813
+      spriteID: f7e1fb4a8ffe5e14cbaf8ac2f0baf050
       vertices: []
       indices: 
       edges: []
@@ -876,7 +878,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b69a2d95182a894e815e98c7d18e2a6
+      spriteID: a9e653d991d7bd94c88153a57b241164
       vertices: []
       indices: 
       edges: []
@@ -896,7 +898,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b478d6bf083d1ca498f56c6865ac6d8b
+      spriteID: ae7b6ad8dd822a5479d7ee6126507208
       vertices: []
       indices: 
       edges: []
@@ -916,7 +918,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a57e64ae07c707a42ad5f0a6c7072bd1
+      spriteID: 9155e032a0ca22348b20861e2868db65
       vertices: []
       indices: 
       edges: []
@@ -936,7 +938,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4cb2d19750393d4c806d286fb146ff5
+      spriteID: 4c745e44872f1d5409baf9480d0ae7a9
       vertices: []
       indices: 
       edges: []
@@ -956,7 +958,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d126abe7294dcc54b8c51a16ba83f1eb
+      spriteID: 60aebef79f014324eb6fd18134b4662b
       vertices: []
       indices: 
       edges: []
@@ -976,17 +978,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51fd652ed40a3747a3bb81c5137e656
+      spriteID: e185bd99437a7194e964503ac7436f2a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_42
+      name: GreenEnemy_Freeze21
       rect:
         serializedVersion: 2
         x: 13
-        y: 112
+        y: 111
         width: 43
         height: 27
       alignment: 7
@@ -996,13 +998,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccc18e56076650040b43766ab33b9c2d
+      spriteID: 08e0446f32e402f49bd0893aabefdc77
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_43
+      name: GreenEnemy_Freeze22
       rect:
         serializedVersion: 2
         x: 69
@@ -1016,13 +1018,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ab38c7aa6830741b072d4393b6e3ef
+      spriteID: c656e70ddd5880a4ebf9f73c66357ac8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_44
+      name: GreenEnemy_Freeze23
       rect:
         serializedVersion: 2
         x: 127
@@ -1036,13 +1038,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2916cba0f9f44274c9612de4459bed0e
+      spriteID: 8eee05838e117b940872f601410567a3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_45
+      name: GreenEnemy_Freeze31
       rect:
         serializedVersion: 2
         x: 7
@@ -1056,17 +1058,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e7431b8a675b904d988bfe6af1a59d9
+      spriteID: 4e251b2805cb14e44af4da90fad9536c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_46
+      name: GreenEnemy_Freeze32
       rect:
         serializedVersion: 2
         x: 68
-        y: 69
+        y: 68
         width: 43
         height: 25
       alignment: 7
@@ -1076,16 +1078,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe35970773c31a144853caf180dc99e1
+      spriteID: ff3dc620c58b7bd408abca634e77ec7d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_3_47
+      name: GreenEnemy_Freeze33
       rect:
         serializedVersion: 2
-        x: 125
+        x: 126
         y: 69
         width: 42
         height: 29
@@ -1096,7 +1098,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dcca4501e98c4541a1cd5c54a86a20f
+      spriteID: e8471fe12368803469ece5b15cce08af
       vertices: []
       indices: 
       edges: []
@@ -1116,7 +1118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15c4ca06621a84444b26367533286c5b
+      spriteID: 9474a9f631998fb4ca57d1f2da74b767
       vertices: []
       indices: 
       edges: []

@@ -406,6 +406,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RedEnemyCurrentState
     m_EventTreshold: -2
+  - m_ConditionMode: 7
+    m_ConditionEvent: RedEnemyCurrentState
+    m_EventTreshold: 8
+  - m_ConditionMode: 7
+    m_ConditionEvent: RedEnemyCurrentState
+    m_EventTreshold: 9
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102368429419650878}
   m_Solo: 0

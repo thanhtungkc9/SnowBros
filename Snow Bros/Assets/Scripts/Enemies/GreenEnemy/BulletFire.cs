@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletFire : MonoBehaviour {
 
-    public float speed = 10f;
+    public float speed = 8f;
 
     private bool direction;
     private GameObject enemy;
@@ -16,11 +16,11 @@ public class BulletFire : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		if(enemy.transform.localScale.x == 1f)
+		if(transform.localScale.x == 1f)
         {
             direction = true;
         }
-        else if (enemy.transform.localScale.x == -1f)
+        else if (transform.localScale.x == -1f)
         {
             direction = false;
         }

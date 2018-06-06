@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour {
     private GameObject player;
     private Rigidbody2D bullet;
 
+    private float timeFly = 0;
     private void Awake()
     {
         player = GameObject.Find("Player");
@@ -46,6 +47,13 @@ public class Bullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         StartCoroutine(Fly());
+        timeFly += Time.deltaTime;
+        if (timeFly >= 0.5f)
+        {
+            bullet.mass = 5;
+            bullet.velocity = new Vector2(0, 0);
+            bullet.gravityScale = 20;
+        }
     }
 
     IEnumerator Fly()
@@ -88,6 +96,7 @@ public class Bullet : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+            
         if(collision.gameObject.tag == "Enemy" 
             || collision.gameObject.tag == "Freeze"
             || collision.gameObject.tag == "Boss"

@@ -73,6 +73,13 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyFreeze.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\BulletFire.cs" />
     <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyAttack1Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyDie2Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyFallBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyFreeze1Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyJumpBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyTurnBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GreenEnemy\GreenEnemyWalkBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyDie2Behaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\RedEnemy\RedEnemyFallBehaviour.cs" />
