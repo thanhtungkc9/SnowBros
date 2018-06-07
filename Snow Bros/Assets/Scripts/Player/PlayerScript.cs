@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -26,23 +27,51 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     private GameObject bullet2;
 
-    public float jumpForce = 1700f;
-    public float moveForce = 150f;
-    public float maxVelocity = 3f;
+    public float jumpForce ;
+    public float moveForce ;
+    public float maxVelocity ;
     public bool grounded = false, bullet = false;
+
+    public float timeImmortal = 5.0f;
+
+    public bool isMoveLeft, isMoveRight, isShoot, isJump;
+
     void Awake()
     {
         playerBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+       
     }
 
     // Use this for initialization
     void Start() {
+        Player_LoadData();
+        GlobalControl.CurrentScene = SceneManager.GetActiveScene().buildIndex;
     }
     // Update is called once per frame
     void FixedUpdate() {
-        Keyboard_Move();   
-       
+        //Keyboard_Move();
+        GlobalControl.Score++;
+        if (timeImmortal >= 0)
+        {
+            timeImmortal -= Time.deltaTime;
+        }
+        if (isMoveLeft)
+        {
+            MoveLeft();
+        }
+       else if (isMoveRight)
+        {
+            MoveRight();
+        }
+        else
+        {
+            playerBody.velocity = new Vector2(0, playerBody.velocity.y);
+        }
+
+        //if (GameObject.FindWithTag("Enemy") == null && GameObject.FindWithTag("Freeze") == null
+        // && GameObject.FindWithTag("Freeze4") == null)
+        if (Input.GetKey(KeyCode.Space)) SceneManager.LoadScene("TransitionScene");
     }
 
     void OnCollisionEnter2D(Collision2D target)
@@ -72,7 +101,7 @@ public class PlayerScript : MonoBehaviour {
         {
             grounded = true;
             float h = Input.GetAxisRaw("Horizontal");
-             if (h != 0)
+             if (h != 0&&isMoveLeft==false&&isMoveRight==false)
             {
                 playerAnimator.SetInteger("CurrentState", STATE_WALK);
             }
@@ -83,10 +112,11 @@ public class PlayerScript : MonoBehaviour {
 
             }
         }
-        if (target.gameObject.tag=="Enemy")
+        if (target.gameObject.tag=="Enemy"&&timeImmortal<0)
         {
             gameObject.layer = 14;
             playerAnimator.SetInteger("CurrentState", STATE_DIE);
+           
         }
     }
 
@@ -107,6 +137,12 @@ public class PlayerScript : MonoBehaviour {
         if (target.gameObject.tag == "Freeze4" &&playerAnimator.GetInteger("CurrentState")==STATE_WALK)
         {
             playerAnimator.SetInteger("CurrentState", STATE_PUSH);
+        }
+        if (target.gameObject.tag == "Enemy" && timeImmortal < 0)
+        {
+            gameObject.layer = 14;
+            playerAnimator.SetInteger("CurrentState", STATE_DIE);
+
         }
     }
 
@@ -163,7 +199,66 @@ public class PlayerScript : MonoBehaviour {
 
     }
 
+    public void MoveLeft()
+    {
+        int currentState = playerAnimator.GetInteger("CurrentState");
+        if (currentState == STATE_DIE || currentState == STATE_RESPAWN || currentState == STATE_FLY)
+            return;
+        float forceX = 0f;
+        float forceY = 0f;
+        Vector3 scale = transform.localScale;
+        scale.x = -1f;
+        transform.localScale = scale;
+        if (playerBody.velocity.x > -maxVelocity)
+        {
+            if (grounded)
+            {
+                forceX = -moveForce;
+            }
+            else
+            {
+                forceX = -moveForce * 0.5f;
+            }
+        }
+        playerBody.AddForce(new Vector2(forceX, forceY));
+    }
+    public void MoveRight()
+    {
+        int currentState = playerAnimator.GetInteger("CurrentState");
+        if (currentState == STATE_DIE || currentState == STATE_RESPAWN || currentState == STATE_FLY)
+            return;
+        float forceX = 0f;
+        float forceY = 0f;
+        Vector3 scale = transform.localScale;
+        scale.x = 1f;
+        transform.localScale = scale;
+        if (playerBody.velocity.x < maxVelocity)
+        {
+            if (grounded)
+            {
+                forceX = moveForce;
+            }
+            else
+            {
+                forceX = moveForce * 0.5f;
+            }
+        }
+        playerBody.AddForce(new Vector2(forceX, forceY));
+    }
+
+    public void Throw()
+    {
+        
+    }
  
+    public void Jump()
+    {
+        if (grounded &&playerAnimator.GetInteger("CurrentState") != STATE_JUMP)
+        {
+            grounded = false;
+            playerAnimator.SetInteger("CurrentState", STATE_JUMP);
+        }
+    }
     public IEnumerator Attack()
     {
         if (bullet)
@@ -178,5 +273,16 @@ public class PlayerScript : MonoBehaviour {
         }
         yield return new WaitForSeconds(.1f);
     }
-
+    public void Player_LoadData()
+    {
+        moveForce = GlobalControl.moveForce;
+        jumpForce = GlobalControl.jumpForce;
+        maxVelocity = GlobalControl.maxVelocity;
+    }
+    public void Player_SaveData()
+    {
+        GlobalControl.moveForce=moveForce ;
+        GlobalControl.jumpForce= jumpForce  ;
+        GlobalControl.maxVelocity= maxVelocity  ;
+    }
 }

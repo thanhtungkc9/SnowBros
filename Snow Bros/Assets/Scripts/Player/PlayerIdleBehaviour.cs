@@ -7,20 +7,23 @@ public class PlayerIdleBehaviour : StateMachineBehaviour {
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         animator.GetComponent<PlayerScript>().gameObject.layer = 13;
-	}
+        if (animator.GetInteger("CurrentState") == 9)
+            animator.GetComponent<PlayerScript>().timeImmortal = 4;
+
+    }
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         float h = Input.GetAxisRaw("Horizontal");
-        if (h != 0)
+        if (h != 0||animator.GetComponent<PlayerScript>().isMoveLeft==true|| animator.GetComponent<PlayerScript>().isMoveRight==true)
         {
                 if (animator.GetInteger("CurrentState") != PlayerScript.STATE_WALK)
                     animator.SetInteger("CurrentState", PlayerScript.STATE_WALK);
              
         }
 
-
-        if (Input.GetKey(KeyCode.J))
+        
+        if (Input.GetKey(KeyCode.J)||animator.GetComponent<PlayerScript>().isShoot)
         {
 
             {
@@ -28,7 +31,7 @@ public class PlayerIdleBehaviour : StateMachineBehaviour {
             }
 
         }
-        else if (Input.GetKeyDown(KeyCode.K))
+        else if (Input.GetKeyDown(KeyCode.K) || animator.GetComponent<PlayerScript>().isJump)
         {
             if (animator.GetComponent<PlayerScript>().grounded && animator.GetInteger("CurrentState") != PlayerScript.STATE_JUMP)
             {

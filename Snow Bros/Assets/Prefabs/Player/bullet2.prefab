@@ -100,9 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  dmg: 20
+  dmg: 10
   forceX: 120
   forceY: 15
+  timeExist: 0.4
+  bigBullet: {fileID: 21300032, guid: 0a8de440c6f24584aaae6ae645781f5e, type: 3}
 --- !u!212 &212256399702541144
 SpriteRenderer:
   m_ObjectHideFlags: 1

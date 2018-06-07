@@ -64,6 +64,12 @@
     <Compile Include="Assets\Scripts\Boss\Boss1\Boss1IdleBehaviour.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss1\Boss1JumpBehaviour.cs" />
     <Compile Include="Assets\Scripts\CameraControllerScript.cs" />
+    <Compile Include="Assets\Scripts\Controller\EventController.cs" />
+    <Compile Include="Assets\Scripts\Controller\GameInformation.cs" />
+    <Compile Include="Assets\Scripts\Controller\GlobalControl.cs" />
+    <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Controller\SceneController.cs" />
+    <Compile Include="Assets\Scripts\Controller\TransitionScene.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyBoss1\AIEnemyBoss1.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyBoss1\EnemyBoss1FallBehaviour.cs" />
@@ -100,14 +106,19 @@
     <Compile Include="Assets\Scripts\Enemies\YellowEnemy\YellowEnemyWalkBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDieBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerIdleBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerJumpBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerKickBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerPushBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerRespawnBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRunThrowBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerThrowBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWalkBehaviour.cs" />
+    <Compile Include="Assets\Scripts\scriptTexttest.cs" />
+    <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
+    <None Include="Assets\Simple UI\Fonts\OFL.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/UIT/HK6/ThietKeGame/Final_Snowbros/SnowBros/Snow Bros/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

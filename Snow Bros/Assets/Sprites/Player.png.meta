@@ -24,7 +24,7 @@ TextureImporter:
     21300038: Player_19
     21300040: Player_20
     21300042: Player_21
-    21300044: Player_22
+    21300044: Title
     21300046: Player_23
     21300048: Player_24
     21300050: Player_25
@@ -205,7 +205,7 @@ TextureImporter:
     21300400: Respawn12
     21300402: SnowBall
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 6
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -223,6 +223,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -233,7 +235,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -735,12 +737,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_22
+      name: Title
       rect:
         serializedVersion: 2
         x: 428
         y: 664
-        width: 97
+        width: 191
         height: 47
       alignment: 7
       pivot: {x: 0.5, y: 0}

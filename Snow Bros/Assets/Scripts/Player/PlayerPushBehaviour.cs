@@ -19,14 +19,15 @@ public class PlayerPushBehaviour : StateMachineBehaviour {
             {
                 animator.SetInteger("CurrentState", PlayerScript.STATE_IDLE);
             }
-        if (Input.GetKey(KeyCode.J))
+            
+        if (Input.GetKey(KeyCode.J) || animator.GetComponent<PlayerScript>().isShoot)
         {
             {
                 animator.SetInteger("CurrentState", PlayerScript.STATE_KICK);
             }
 
         }
-        else if (Input.GetKeyDown(KeyCode.K))
+        else if (Input.GetKeyDown(KeyCode.K)|| animator.GetComponent<PlayerScript>().isJump)
         {
 
             if (animator.GetComponent<PlayerScript>().grounded && animator.GetInteger("CurrentState") != PlayerScript.STATE_JUMP)

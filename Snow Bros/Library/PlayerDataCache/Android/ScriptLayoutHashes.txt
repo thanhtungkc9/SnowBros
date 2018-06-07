@@ -1,10 +1,13 @@
 Android
 PlayerPath?
-C:/Users/ThanhTung/Desktop/test.apk
+C:/Users/ThanhTung/Desktop/SnowBros.apk
 SceneListBegin?
+Assets/Scenes/MenuScene.unity
+Assets/Scenes/SelectStage.unity
 Assets/Scenes/Stage1-1.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GreenEnemyAttack2Behaviour
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -23,6 +26,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.YellowEnemyFreeze1Behaviour
 6a2951ab5e4b0040f1623443d5712d75 Unity.TextMeshPro.dll:TMPro.TMP_Text
+f2d769ff66d559636c21dcba3ff16453 Assembly-CSharp.dll:.IconPreview
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GreenEnemyDie2Behaviour
 2686996300181ac4e5291dadc6690617 Assembly-CSharp.dll:.EnemyFreeze
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -91,6 +95,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+85e2a1d29d4bdb5f9436af60c5b04b67 Assembly-CSharp.dll:.GreenVerticalEnemyAI
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.EnemyBoss1FallBehaviour
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -135,12 +140,14 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerJumpBehaviour
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GreenEnemyWalkBehaviour
+730a098fcf6f682c618d086b6ae6ef82 Assembly-CSharp.dll:.scriptTexttest
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GreenEnemyTurnBehaviour
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Boss1AttackBehaviour
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.RedEnemyTurnBehaviour
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerWalkBehaviour
-ef8be0609cbbf825b69b9e081d3c6944 Assembly-CSharp.dll:.PlayerScript
+1df0f0af82698dbf69b5111641bb0ec2 Assembly-CSharp.dll:.PlayerScript
+e0f8db15813e5b7f67b4b9f661b4be6c Assembly-CSharp.dll:.CameraControllerScript
 99298540746b8a380b8102c69bc161ec Assembly-CSharp.dll:.SizeJumpEnemy
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.RedEnemyJumpBehaviour
@@ -165,6 +172,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.YellowEnemyJumpBehaviour
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerThrowBehaviour
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.EventController
 72a8523b432c0a5317826b7a9e0a0e79 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 e46113951763d45502a1260c6ea4c4e8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 392c5b921098bd4c139d9146d0efa6d7 Unity.TextMeshPro.dll:TMPro.TMP_Settings
@@ -196,6 +204,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.EnemyBoss1TurnBehaviour
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.YellowEnemyWalkBehaviour
 49895e593a6421541e729a7556b190bf Assembly-CSharp.dll:.Bullet
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SceneController
 84fefc4466cd5ec28e7aa39e1da9a2c9 Assembly-CSharp.dll:.Player
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Boss1IdleBehaviour
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
@@ -209,5 +218,6 @@ c6d57b2ff1e4c9ac94bc1530c2923167 Assembly-CSharp.dll:.YellowEnemyAI
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.EnemyBoss1Freeze1Behaviour
 d3baf945a28bf6b4a4706c8193e7459e Assembly-CSharp.dll:.BulletFire
 2e3bc23aaf50012904940a70765cbdea Assembly-CSharp.dll:.Enemy
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GreenEnemyAttack2Behaviour
-85e2a1d29d4bdb5f9436af60c5b04b67 Assembly-CSharp.dll:.GreenVerticalEnemyAI
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerDieBehaviour
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerRespawnBehaviour
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerController

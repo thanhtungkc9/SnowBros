@@ -201,4 +201,11 @@ public class Player : MonoBehaviour {
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
     }
+
+    public void Player_LoadData()
+    {
+        moveForce = GlobalControl.moveForce;
+        jumpForce = GlobalControl.jumpForce;
+        maxVelocity = GlobalControl.maxVelocity;
+}
 }

@@ -5,24 +5,28 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     public float speed = 8f;
-    public int dmg = 5;
+    public int dmg = 10;
     public float forceX=120.0f;
     public float forceY=15.0f;
-
+    public float timeExist = 0.4f;
+    public Sprite bigBullet;
 
     private bool direction;
     private GameObject player;
     private Rigidbody2D bullet;
 
+    
     private float timeFly = 0;
     private void Awake()
     {
         player = GameObject.Find("Player");
         bullet = GetComponent<Rigidbody2D>();
+        Bullet_LoadData();
     }
 
     // Use this for initialization
     void Start () {
+
         if (player.transform.localScale.x == 1f)
         {
             direction = true;
@@ -48,7 +52,7 @@ public class Bullet : MonoBehaviour {
 	void Update () {
         StartCoroutine(Fly());
         timeFly += Time.deltaTime;
-        if (timeFly >= 0.5f)
+        if (timeFly >= timeExist)
         {
             bullet.mass = 5;
             bullet.velocity = new Vector2(0, 0);
@@ -109,5 +113,13 @@ public class Bullet : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void Bullet_LoadData()
+    {
+        dmg = GlobalControl.damage;
+        timeExist = GlobalControl.timeExist;
+        GetComponent<Rigidbody2D>().mass = GlobalControl.mass;
+        if (GlobalControl.spriteName=="BigBullet") GetComponent<SpriteRenderer>().sprite=bigBullet;
     }
 }

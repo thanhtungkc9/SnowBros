@@ -13,16 +13,16 @@ public class PlayerWalkBehaviour : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         float h = Input.GetAxisRaw("Horizontal");
         Transform transform = animator.GetComponent<PlayerScript>().transform;
-        if (h == 0)
+        if (h == 0&& (animator.GetComponent<PlayerScript>().isMoveLeft==false&& animator.GetComponent<PlayerScript>().isMoveRight==false))
         {
             animator.SetInteger("CurrentState", PlayerScript.STATE_IDLE);
         }
-        if (Input.GetKey(KeyCode.J) || Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKey(KeyCode.J) || Input.GetKeyDown(KeyCode.J) || animator.GetComponent<PlayerScript>().isShoot)
         {
 
             animator.SetInteger("CurrentState", PlayerScript.STATE_RUNTHROW);
         }
-        else if (Input.GetKeyDown(KeyCode.K))
+        else if (Input.GetKeyDown(KeyCode.K) || animator.GetComponent<PlayerScript>().isJump)
         {
 
             if (animator.GetComponent<PlayerScript>().grounded && animator.GetInteger("CurrentState") != PlayerScript.STATE_JUMP)
