@@ -6,7 +6,7 @@ public class AIEnemyBoss1 : MonoBehaviour {
     
     private Animator enemyBoss1Animator;
     public Rigidbody2D enemyBoss1Body;
-
+    public PhysicsMaterial2D bounce;
     public bool grounded = false;
     public bool walled = false;
 
@@ -28,7 +28,7 @@ public class AIEnemyBoss1 : MonoBehaviour {
 
     //Enemy Infomation
     public int Health=100;
-
+    bool playerkicked = false;
     // Use this for initialization
     void Start()
     {
@@ -46,7 +46,7 @@ public class AIEnemyBoss1 : MonoBehaviour {
     {
         time += Time.deltaTime;
         
-        if (time > 1.0f)
+        if (time > 1.0f&&!playerkicked)
         {
             Health = Mathf.Min(100, Health + 4);   
             time -= 1.0f;
@@ -72,19 +72,22 @@ public class AIEnemyBoss1 : MonoBehaviour {
             walled = true;
             enemyBoss1Animator.SetInteger("EnemyBoss1CurrentState", STATE_TURN);
         }
-        if (target.gameObject.tag == "Freeze4"&&target.rigidbody.velocity.x>3.0f)
+        if (target.gameObject.tag == "Freeze4"&&Mathf.Abs( target.rigidbody.velocity.x)>2.0f)
         {
             Destroy(gameObject);
         }
+
     }
     private void OnCollisionExit2D(Collision2D target)
     {
         if ((target.gameObject.tag == "Ground")&& enemyBoss1Body.velocity.y < 0.1f)
         {
-
-            grounded = false;
-            enemyBoss1Animator.SetInteger("EnemyBoss1CurrentState", STATE_FALL);
-            Debug.Log("EnemyBoss1 Fall with velocity: " + enemyBoss1Body.velocity.y);
+            if (gameObject.tag != "Freeze" && gameObject.tag != "Freeze4")
+            {
+                grounded = false;
+                enemyBoss1Animator.SetInteger("EnemyBoss1CurrentState", STATE_FALL);
+              //  Debug.Log("EnemyBoss1 Fall with velocity: " + enemyBoss1Body.velocity.y);
+            }
         }
         else
             if (target.gameObject.tag == "Wall" )
@@ -97,7 +100,13 @@ public class AIEnemyBoss1 : MonoBehaviour {
     {
         Health = Mathf.Max(0,Health-dmg);
     }
-    
+    void PlayerKicked(int direction)
+    {
+        playerkicked = true;
+        enemyBoss1Body.AddForce(new Vector2(3000f * direction, 0));
+        enemyBoss1Body.sharedMaterial = bounce;
+        enemyBoss1Body.freezeRotation = false;
+    }
     void Animation_Freeze()
     {
         if (Health <= 25)

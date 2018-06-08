@@ -11,7 +11,7 @@ public class TransitionScene : MonoBehaviour {
     public void Start()
     {
         a = (GlobalControl.CurrentScene-2) / 11 + 1;
-        b = (GlobalControl.CurrentScene-2) % 11 ;
+        b = (GlobalControl.CurrentScene-1) % 11 ;
         sceneName.text = "Stage " + a.ToString() + "-" + b.ToString();
     }
     public void Update()

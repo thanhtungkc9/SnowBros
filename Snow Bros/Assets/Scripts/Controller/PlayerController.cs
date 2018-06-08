@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour,IPointerDownHandler,IPointerUpHand
     {
         player = GameObject.Find("Player").GetComponent<PlayerScript>();
       
+      
     }
     public void OnPointerDown(PointerEventData data)
     {
+        Debug.Log("Player");
         if (gameObject.name == "LeftButton")
         {
             player.isMoveLeft=true;

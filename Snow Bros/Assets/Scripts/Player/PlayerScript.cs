@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class PlayerScript : MonoBehaviour {
 
 
@@ -27,6 +26,12 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     private GameObject bullet2;
 
+    //Sound
+    [SerializeField]
+    public AudioClip audio_throw,audio_respawn,audio_jump;
+    public AudioSource audioPlayer;
+
+
     public float jumpForce ;
     public float moveForce ;
     public float maxVelocity ;
@@ -47,6 +52,7 @@ public class PlayerScript : MonoBehaviour {
     void Start() {
         Player_LoadData();
         GlobalControl.CurrentScene = SceneManager.GetActiveScene().buildIndex;
+        audioPlayer = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void FixedUpdate() {
@@ -72,6 +78,16 @@ public class PlayerScript : MonoBehaviour {
         //if (GameObject.FindWithTag("Enemy") == null && GameObject.FindWithTag("Freeze") == null
         // && GameObject.FindWithTag("Freeze4") == null)
         if (Input.GetKey(KeyCode.Space)) SceneManager.LoadScene("TransitionScene");
+        if (GameObject.FindGameObjectWithTag("Enemy")==null
+            && GameObject.FindGameObjectWithTag("Freeze") == null
+            &&GameObject.FindGameObjectWithTag("Freeze4") == null
+            &&  GameObject.FindGameObjectWithTag("Boss") == null
+                )
+            SceneManager.LoadScene("TransitionScene");
+        else
+        {
+            Debug.Log(GameObject.FindGameObjectsWithTag("Enemy"));
+        }
     }
 
     void OnCollisionEnter2D(Collision2D target)
@@ -256,6 +272,7 @@ public class PlayerScript : MonoBehaviour {
         if (grounded &&playerAnimator.GetInteger("CurrentState") != STATE_JUMP)
         {
             grounded = false;
+            audioPlayer.PlayOneShot(audio_jump);
             playerAnimator.SetInteger("CurrentState", STATE_JUMP);
         }
     }
@@ -264,13 +281,16 @@ public class PlayerScript : MonoBehaviour {
         if (bullet)
         {
             bullet = !bullet;
+            audioPlayer.PlayOneShot(audio_throw);
             Instantiate(bullet1, shootPoint.position, Quaternion.identity);
         }
         else
         {
             bullet = !bullet;
+            audioPlayer.PlayOneShot(audio_throw);
             Instantiate(bullet2, shootPoint.position, Quaternion.identity);
         }
+
         yield return new WaitForSeconds(.1f);
     }
     public void Player_LoadData()

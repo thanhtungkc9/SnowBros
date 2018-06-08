@@ -58,7 +58,7 @@ public class RedEnemyAI : MonoBehaviour {
         time += Time.deltaTime;
         if (time > 1.0f && !playerkicked)
         {
-            Health = Mathf.Min(100, Health + 4);
+            Health = Mathf.Min(100, Health + 10);
             time -= 1.0f;
         }
         if (Health < 99) Animation_Freeze();

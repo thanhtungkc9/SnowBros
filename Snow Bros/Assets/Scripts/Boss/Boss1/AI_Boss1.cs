@@ -18,6 +18,9 @@ public class AI_Boss1 : MonoBehaviour {
 
     [SerializeField]
     public GameObject enemyBoss1;
+    //
+    [SerializeField]
+    private int Health=100;
     // Use this for initialization
     void Start () {
 
@@ -30,7 +33,8 @@ public class AI_Boss1 : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate () {
-		
+        if (Health <= 0)
+            Destroy(gameObject);
 	}
     void OnCollisionEnter2D(Collision2D target)
     {
@@ -39,6 +43,11 @@ public class AI_Boss1 : MonoBehaviour {
         {
             grounded = true;
             boss1Animator.SetInteger("Boss1CurrentState", STATE_IDLE);
+        }
+        if (target.gameObject.tag=="Freeze4")
+        {
+            Health -= 5;
+            Destroy(target.gameObject);
         }
     }
     void OnCollisionExit2D(Collision2D target)

@@ -7,7 +7,8 @@ public class PlayerJumpBehaviour : StateMachineBehaviour {
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         animator.GetComponent<PlayerScript>().playerBody.AddForce(new Vector2(0, GlobalControl.jumpForce));
-       
+        animator.GetComponent<PlayerScript>().audioPlayer.PlayOneShot(animator.GetComponent<PlayerScript>().audio_jump);
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

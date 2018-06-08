@@ -10,7 +10,7 @@ public class EventController : MonoBehaviour {
 
     private void Start()
     {
-        menu.gameObject.active = false;
+
     }
     public void OnPlayButtonClick()
     {

@@ -36,6 +36,7 @@ public class YellowEnemyAI : MonoBehaviour
     public float moveForce = 150f;
     public float maxVelocity = 1.5f;
     public float time = 0.0f;
+    public float timeJump = 0.0f;
 
     //Enemy Information
     public int Health = 100;
@@ -57,12 +58,7 @@ public class YellowEnemyAI : MonoBehaviour
     void FixedUpdate()
     {
         time += Time.deltaTime;
-        if (time > 1.0f && !playerkicked)
-        {
-            Health = Mathf.Min(100, Health + 4);
-            time -= 1.0f;
-        }
-        if (Health < 99) Animation_Freeze();
+        if (Health < 100) Animation_Freeze();
         else
         {
             if (gameObject.layer != 14)
@@ -71,6 +67,12 @@ public class YellowEnemyAI : MonoBehaviour
                 gameObject.layer = 9;
             }
         }
+        if (time > 1.0f && !playerkicked)
+        {
+            Health = Mathf.Min(100, Health + 10);
+            time -= 1.0f;
+        }
+       
 
 
         // transform.LookAt(target);
@@ -86,13 +88,18 @@ public class YellowEnemyAI : MonoBehaviour
 
         }
         if (isJumpPosition == true && (YellowEnemyAnimator.GetInteger("YellowEnemyCurrentState") == STATE_WALK)
-            && playerTranform.position.y > transform.position.y + 0.5f)
+            && playerTranform.position.y > transform.position.y + 0.5f
+            && timeJump <= 0)
         {
-
+            timeJump = 3.0f;
             YellowEnemyAnimator.SetInteger("YellowEnemyCurrentState", STATE_JUMP);
             isJumpPosition = false;
             Debug.Log("Jump");
 
+        }
+        else
+        {
+            timeJump -= Time.deltaTime;
         }
 
     }

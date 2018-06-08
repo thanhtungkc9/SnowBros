@@ -70,7 +70,7 @@ public class GreenEnemyAI : MonoBehaviour
         time += Time.deltaTime;
         if (time > 1.0f && !playerkicked)
         {
-            Health = Mathf.Min(100, Health + 4);
+            Health = Mathf.Min(100, Health + 10);
             time -= 1.0f;
         }
         if (Health < 99) Animation_Freeze();
@@ -155,9 +155,13 @@ public class GreenEnemyAI : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D target)
     {
-        if (gameObject.tag == "Freeze4" && target.gameObject.tag == "Ground")
+       // if (gameObject.tag == "Freeze4" && target.gameObject.tag == "Ground")
         {
-            GreenEnemyBody.velocity = new Vector2(GreenEnemyBody.velocity.x, 0);
+           // GreenEnemyBody.velocity = new Vector2(GreenEnemyBody.velocity.x, 0);
+        }
+        if (gameObject.tag == "Freeze4" && target.gameObject.tag == "Boss")
+        {
+            Destroy(gameObject);
         }
     }
 
