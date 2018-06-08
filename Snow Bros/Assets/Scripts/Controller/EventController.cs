@@ -1,10 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class EventController : MonoBehaviour {
 
-	public void OnPlayButtonClick()
+    [SerializeField]
+    private Image menu;
+
+    private void Start()
+    {
+        menu.gameObject.active = false;
+    }
+    public void OnPlayButtonClick()
     {
         SceneController.LoadScene("SelectStage");
     }
@@ -25,5 +33,21 @@ public class EventController : MonoBehaviour {
     public void BackToMenuScene()
     {
         SceneController.BackToMenuScene();
+    }
+    public void ReloadScene()
+    {
+        SceneController.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void ShowMenu()
+    {
+        menu.gameObject.active = true;
+        Time.timeScale = 0;
+        GlobalControl.isPaused = true;
+    }
+    public void HideMenu()
+    {
+        menu.gameObject.active = false;
+        Time.timeScale = 1;
+        GlobalControl.isPaused = false;
     }
 }

@@ -7,6 +7,7 @@ public class YellowEnemyTurnBehaviour : StateMachineBehaviour {
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+
         Vector3 scale = animator.GetComponent<YellowEnemyAI>().transform.localScale;
         scale.x = -scale.x;
         animator.GetComponent<YellowEnemyAI>().transform.localScale = scale;

@@ -7,6 +7,9 @@ public class GlobalControl : MonoBehaviour
 {
     public static GlobalControl Instance;
 
+    //GameController
+    public static bool isPaused = false;
+
     //Player Information
     public static int DeathCount = 0;
     public static int Score = 0;
@@ -21,10 +24,11 @@ public class GlobalControl : MonoBehaviour
     public static string spriteName = "SmallBullet"; // BigBullet with Item
 
     //Scene Information
-    public static Scene[] allScene = SceneManager.GetAllScenes();
     public static int CurrentScene = 0;
 
-
+    //Settings
+    public static bool audio=true;
+    public static bool sound=true;
 
     void Awake()
     {

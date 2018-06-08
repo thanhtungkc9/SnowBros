@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   margin: {x: 1, y: 1}
   smoothing: {x: 3, y: 3}
-  cameraBounds: {fileID: 0}
+  cameraBounds: {fileID: 1850961696}
   isFollowing: 0
 --- !u!1001 &432116482
 Prefab:
@@ -542,3 +542,8 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8181ef0573bf545a785d06a4d2bad1, type: 2}
   m_IsPrefabAsset: 0
+--- !u!61 &1850961696 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 61017099249165496, guid: f7c24279502c3a14da5cf116fbfcfd2c,
+    type: 2}
+  m_PrefabInternal: {fileID: 432116482}

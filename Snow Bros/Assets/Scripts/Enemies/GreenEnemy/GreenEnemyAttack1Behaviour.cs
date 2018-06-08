@@ -11,6 +11,7 @@ public class GreenEnemyAttack1Behaviour : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        if (GlobalControl.isPaused) return;
         if (animator.GetComponent<GreenEnemyAI>().isShoot == false)
         {
             animator.GetComponent<GreenEnemyAI>().StartCoroutine(animator.GetComponent<GreenEnemyAI>().Attack1());

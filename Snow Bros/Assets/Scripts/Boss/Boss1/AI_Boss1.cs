@@ -29,7 +29,7 @@ public class AI_Boss1 : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
 		
 	}
     void OnCollisionEnter2D(Collision2D target)

@@ -13,6 +13,7 @@ public class RedEnemyFreeze1Behaviour : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        if (GlobalControl.isPaused) return;
         if (animator.GetComponent<RedEnemyAI>().Health >=100)
         {
             animator.SetInteger("RedEnemyCurrentState", animator.GetComponent<RedEnemyAI>().STATE_WAKEUP);

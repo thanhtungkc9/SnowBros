@@ -8,6 +8,7 @@ public class GreenEnemyWalkBehaviour : StateMachineBehaviour
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        if (GlobalControl.isPaused) return;
         animator.SetInteger("GreenEnemyCurrentState", animator.GetComponent<GreenEnemyAI>().STATE_WALK);
         if (animator.GetComponent<GreenEnemyAI>().transform.localScale.x > 0)
         {
@@ -47,6 +48,7 @@ public class GreenEnemyWalkBehaviour : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        if (GlobalControl.isPaused) return;
         if (animator.GetComponent<GreenEnemyAI>().transform.localScale.x > 0)
         {
             float forceX = 0f;
